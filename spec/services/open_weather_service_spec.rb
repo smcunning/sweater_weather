@@ -4,10 +4,8 @@ describe OpenWeatherService do
   context "instance methods" do
     context "#forecast" do
       it "returns a set of forecast data by coordinates" do
-        VCR.use_cassette("coordinates_by_city") do
-          VCR.use_cassette("forecast_data") do
-            @search = OpenWeatherService.forecast(39.738453, -104.984853)
-          end
+        VCR.use_cassette("forecast_data") do
+          @search = OpenWeatherService.forecast(39.738453, -104.984853)
         end
 
         expect(@search).to be_a Hash
