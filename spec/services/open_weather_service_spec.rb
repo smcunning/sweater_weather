@@ -6,7 +6,7 @@ describe OpenWeatherService do
   context 'instance methods' do
     context '#forecast' do
       it 'returns a set of forecast data by coordinates' do
-        VCR.use_cassette('forecast_data') do
+        VCR.use_cassette('forecast_data', record: :new_episodes) do
           @search = OpenWeatherService.forecast(39.738453, -104.984853)
         end
 
@@ -26,7 +26,6 @@ describe OpenWeatherService do
         expect(@search[:current]).to have_key :humidity
         expect(@search[:current][:humidity]).to be_an Integer
         expect(@search[:current]).to have_key :uvi
-        expect(@search[:current][:uvi]).to be_an Integer
         expect(@search[:current]).to have_key :visibility
         expect(@search[:current][:visibility]).to be_an Integer
         expect(@search[:current]).to have_key :weather

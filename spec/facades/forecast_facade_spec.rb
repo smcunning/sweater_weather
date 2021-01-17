@@ -5,7 +5,7 @@ require 'rails_helper'
 describe ForecastFacade do
   describe 'class methods' do
     it '.city_coordinates' do
-      VCR.use_cassette('coordinates_by_city') do
+      VCR.use_cassette('coordinates_by_city', record: :new_episodes) do
         coords = ForecastFacade.city_coordinates('denver,co')
         expect(coords).to be_a Hash
         expect(coords).to have_key :lat

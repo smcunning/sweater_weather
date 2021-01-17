@@ -6,7 +6,7 @@ describe MapquestService do
   context 'instance methods' do
     context '#coordinates_by_city' do
       it 'returns a longitude and latitude by a city name' do
-        VCR.use_cassette('coordinates_by_city') do
+        VCR.use_cassette('coordinates_by_city', record: :new_episodes) do
           @search = MapquestService.coordinates_by_city('denver,co')
         end
 
