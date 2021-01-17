@@ -15,6 +15,7 @@
 # See http://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
 require 'simplecov'
 SimpleCov.start
+SimpleCov.add_filter ["app/channels", "app/helpers", "app/mailers", "app/jobs", "spec/rails_helper"]
 require 'faker'
 require 'webmock/rspec'
 require 'vcr'
