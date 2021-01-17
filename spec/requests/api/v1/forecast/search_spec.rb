@@ -1,8 +1,10 @@
+# frozen_string_literal: true
+
 require 'rails_helper'
 
 describe 'Forecast by Location Endpoint' do
   it 'can return the weather forecast for a city' do
-    VCR.use_cassette('mapquest_weather_combined', :record => :new_episodes) do
+    VCR.use_cassette('mapquest_weather_combined', record: :new_episodes) do
       get '/api/v1/forecast?location=denver,co'
 
       expect(response).to be_successful
@@ -12,7 +14,7 @@ describe 'Forecast by Location Endpoint' do
       expect(forecast[:id]).to eq('null')
       expect(forecast[:type]).to eq('forecast')
 
-      #current_weather
+      # current_weather
       expect(forecast[:attributes][:current_weather]).to be_a Hash
       expect(forecast[:attributes][:current_weather][:datetime]).to be_a String
       expect(forecast[:attributes][:current_weather][:sunrise]).to be_a String
@@ -25,7 +27,7 @@ describe 'Forecast by Location Endpoint' do
       expect(forecast[:attributes][:current_weather][:conditions]).to be_a String
       expect(forecast[:attributes][:current_weather][:icon]).to be_a String
 
-      #daily_weather
+      # daily_weather
       expect(forecast[:attributes][:daily_weather]).to be_an Array
       expect(forecast[:attributes][:daily_weather][0][:date]).to be_a String
       expect(forecast[:attributes][:daily_weather][0][:sunrise]).to be_a String
@@ -35,7 +37,7 @@ describe 'Forecast by Location Endpoint' do
       expect(forecast[:attributes][:daily_weather][0][:conditions]).to be_a String
       expect(forecast[:attributes][:daily_weather][0][:icon]).to be_a String
 
-      #hourly_weather
+      # hourly_weather
       expect(forecast[:attributes][:hourly_weather]).to be_an Array
       expect(forecast[:attributes][:hourly_weather][0][:time]).to be_a String
       expect(forecast[:attributes][:hourly_weather][0][:temperature]).to be_a Float

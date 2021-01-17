@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class MapquestService
   def self.coordinates_by_city(city)
     results = conn.get('/geocoding/v1/address?') do |req|

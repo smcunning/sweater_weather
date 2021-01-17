@@ -1,26 +1,27 @@
+# frozen_string_literal: true
+
 describe HourlyWeather do
   it 'exists with attributes' do
     data = {
-      :dt=>1610863200,
-      :temp=>271.41,
-      :feels_like=>265.98,
-      :pressure=>1023,
-      :humidity=>63,
-      :dew_point=>265.98,
-      :uvi=>0,
-      :clouds=>100,
-      :visibility=>10000,
-      :wind_speed=>3.64,
-      :wind_deg=>129,
-      :weather=>
-      [
+      dt: 1_610_863_200,
+      temp: 271.41,
+      feels_like: 265.98,
+      pressure: 1023,
+      humidity: 63,
+      dew_point: 265.98,
+      uvi: 0,
+      clouds: 100,
+      visibility: 10_000,
+      wind_speed: 3.64,
+      wind_deg: 129,
+      weather: [
         {
-          :id=>804,
-          :main=>"Clouds",
-          :description=>"overcast clouds",
-          :icon=>"04n"
-          }
-        ]
+          id: 804,
+          main: 'Clouds',
+          description: 'overcast clouds',
+          icon: '04n'
+        }
+      ]
     }
 
     hourly = HourlyWeather.new(data)

@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module Convertable
   def convert_datetime(datetime)
     Time.at(datetime).to_datetime.to_s

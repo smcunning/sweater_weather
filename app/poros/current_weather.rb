@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class CurrentWeather
   include Convertable
   attr_reader :datetime,
@@ -10,6 +12,7 @@ class CurrentWeather
               :visibility,
               :conditions,
               :icon
+
   def initialize(attributes)
     @datetime = convert_datetime(attributes[:dt])
     @sunrise = convert_datetime(attributes[:sunrise])
@@ -17,7 +20,7 @@ class CurrentWeather
     @temperature = attributes[:temp]
     @feels_like = attributes[:feels_like]
     @humidity = attributes[:humidity]
-    @uvi= attributes[:uvi]
+    @uvi = attributes[:uvi]
     @visibility = attributes[:visibility]
     @conditions = attributes[:weather][0][:description]
     @icon = attributes[:weather][0][:icon]

@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class DailyWeather
   include Convertable
   attr_reader :date,
@@ -7,6 +9,7 @@ class DailyWeather
               :min_temp,
               :conditions,
               :icon
+
   def initialize(attributes)
     @date = convert_date(attributes[:dt])
     @sunrise = convert_datetime(attributes[:sunrise])

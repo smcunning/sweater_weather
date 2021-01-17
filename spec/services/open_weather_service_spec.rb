@@ -1,16 +1,18 @@
+# frozen_string_literal: true
+
 require 'rails_helper'
 
 describe OpenWeatherService do
-  context "instance methods" do
-    context "#forecast" do
-      it "returns a set of forecast data by coordinates" do
-        VCR.use_cassette("forecast_data") do
+  context 'instance methods' do
+    context '#forecast' do
+      it 'returns a set of forecast data by coordinates' do
+        VCR.use_cassette('forecast_data') do
           @search = OpenWeatherService.forecast(39.738453, -104.984853)
         end
 
         expect(@search).to be_a Hash
 
-        #current
+        # current
         expect(@search).to have_key :current
         expect(@search[:current]).to be_an Hash
         expect(@search[:current]).to have_key :dt
@@ -34,11 +36,11 @@ describe OpenWeatherService do
         expect(@search[:current][:weather][0]).to have_key :icon
         expect(@search[:current][:weather][0][:icon]).to be_a String
 
-        #results do not include certain weather data
+        # results do not include certain weather data
         expect(@search).to_not have_key :minutely
         expect(@search).to_not have_key :alerts
 
-        #hourly
+        # hourly
         expect(@search.count).to eq(7)
         expect(@search[:hourly]).to be_an Array
         expect(@search[:hourly][0]).to have_key :dt
@@ -56,7 +58,7 @@ describe OpenWeatherService do
         expect(@search[:hourly][0][:weather][0]).to have_key :icon
         expect(@search[:hourly][0][:weather][0][:icon]).to be_a String
 
-        #daily
+        # daily
         expect(@search.count).to eq(7)
         expect(@search[:daily]).to be_an Array
         expect(@search[:daily][0]).to have_key :dt

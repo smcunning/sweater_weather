@@ -1,8 +1,8 @@
+# frozen_string_literal: true
+
 class ForecastSerializer
   include FastJsonapi::ObjectSerializer
-  attribute :current_weather do |forecast|
-    forecast.current
-  end
+  attribute :current_weather, &:current
 
   attribute :daily_weather do |forecast|
     forecast[0..4].daily.each do |day|

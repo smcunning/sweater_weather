@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class OpenWeatherService
   def self.forecast(lat, lon)
     results = conn.get('/data/2.5/onecall?') do |req|

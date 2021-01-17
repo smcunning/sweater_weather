@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class ForecastFacade
   def self.forecast(city)
     ForecastSerializer.new(forecast_data(city))

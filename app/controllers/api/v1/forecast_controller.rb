@@ -1,5 +1,11 @@
-class Api::V1::ForecastController < ApplicationController
-  def show
-    render json: ForecastFacade.forecast(params[:location])
+# frozen_string_literal: true
+
+module Api
+  module V1
+    class ForecastController < ApplicationController
+      def show
+        render json: ForecastFacade.forecast(params[:location])
+      end
+    end
   end
 end

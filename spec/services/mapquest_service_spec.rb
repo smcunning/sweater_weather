@@ -1,11 +1,13 @@
+# frozen_string_literal: true
+
 require 'rails_helper'
 
 describe MapquestService do
-  context "instance methods" do
-    context "#coordinates_by_city" do
-      it "returns a longitude and latitude by a city name" do
-        VCR.use_cassette("coordinates_by_city") do
-          @search = MapquestService.coordinates_by_city("denver,co")
+  context 'instance methods' do
+    context '#coordinates_by_city' do
+      it 'returns a longitude and latitude by a city name' do
+        VCR.use_cassette('coordinates_by_city') do
+          @search = MapquestService.coordinates_by_city('denver,co')
         end
 
         expect(@search).to be_a Hash
