@@ -1,4 +1,5 @@
 class Forecast
+  include Convertable
   attr_reader  :id,
                :current,
                :hourly,
