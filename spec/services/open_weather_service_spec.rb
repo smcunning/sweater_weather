@@ -26,7 +26,6 @@ describe OpenWeatherService do
         expect(@search[:current]).to have_key :humidity
         expect(@search[:current][:humidity]).to be_an Integer
         expect(@search[:current]).to have_key :uvi
-        expect(@search[:current][:uvi]).to be_an Integer
         expect(@search[:current]).to have_key :visibility
         expect(@search[:current][:visibility]).to be_an Integer
         expect(@search[:current]).to have_key :weather
