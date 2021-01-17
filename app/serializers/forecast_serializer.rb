@@ -5,13 +5,13 @@ class ForecastSerializer
   end
 
   attribute :daily_weather do |forecast|
-    forecast.daily.each do |day|
+    forecast[0..4].daily.each do |day|
       day
     end
   end
 
   attribute :hourly_weather do |forecast|
-    forecast.hourly.each do |hour|
+    forecast[0..7].hourly.each do |hour|
       hour
     end
   end
