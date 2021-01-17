@@ -1,16 +1,21 @@
 class ForecastFacade
   def self.forecast(city)
-    lat = city_coordinates(city)[:lat]
-    lon = city_coordinates(city)[:lon]
-    require "pry"; binding.pry
-    ForecastSerializer.new(OpenWeatherService.forecast(lat, lon))
+    ForecastSerializer.new(forecast_data(city))
+  end
+
+  def self.forecast_data(city)
+    coords = city_coordinates(city)
+    lat = coords[:lat]
+    lon = coords[:lon]
+    data = OpenWeatherService.forecast(lat, lon)
+    Forecast.new(data)
   end
 
   def self.city_coordinates(city)
-    results = MapquestService.coordinates_by_city(city)
+    coordinates = MapquestService.coordinates_by_city(city)
     {
-      lat: results[:results][0][:locations][0][:latLng][:lat],
-      lon: results[:results][0][:locations][0][:latLng][:lng]
+      lat: coordinates[:results][0][:locations][0][:latLng][:lat],
+      lon: coordinates[:results][0][:locations][0][:latLng][:lng]
     }
   end
 end
