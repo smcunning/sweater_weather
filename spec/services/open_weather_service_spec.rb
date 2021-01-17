@@ -24,7 +24,7 @@ describe OpenWeatherService do
         expect(@search[:current]).to have_key :humidity
         expect(@search[:current][:humidity]).to be_an Integer
         expect(@search[:current]).to have_key :uvi
-        expect(@search[:current][:uvi]).to be_an Float
+        expect(@search[:current][:uvi]).to be_an Integer
         expect(@search[:current]).to have_key :visibility
         expect(@search[:current][:visibility]).to be_an Integer
         expect(@search[:current]).to have_key :weather
@@ -34,8 +34,9 @@ describe OpenWeatherService do
         expect(@search[:current][:weather][0]).to have_key :icon
         expect(@search[:current][:weather][0][:icon]).to be_a String
 
-        #results do not include "minutely" weather data
+        #results do not include certain weather data
         expect(@search).to_not have_key :minutely
+        expect(@search).to_not have_key :alerts
 
         #hourly
         expect(@search.count).to eq(7)

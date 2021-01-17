@@ -9,7 +9,7 @@ describe DailyWeather do
       :temp=>{
         :day=>279.38,
         :min=>271.41,
-        :max=>280,
+        :max=>280.0,
         :night=>271.41,
         :eve=>276.54,
         :morn=>274.18

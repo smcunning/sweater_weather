@@ -27,22 +27,22 @@ describe 'Forecast by Location Endpoint' do
 
       #daily_weather
       expect(forecast[:attributes][:daily_weather]).to be_an Array
-      expect(forecast[:attributes][:daily_weather][:date]).to be_a String
-      expect(forecast[:attributes][:daily_weather][:sunrise]).to be_a String
-      expect(forecast[:attributes][:daily_weather][:sunset]).to be_a String
-      expect(forecast[:attributes][:daily_weather][:max_temp]).to be_a Float
-      expect(forecast[:attributes][:daily_weather][:min_temp]).to be_a Float
-      expect(forecast[:attributes][:daily_weather][:conditions]).to be_a String
-      expect(forecast[:attributes][:daily_weather][:icon]).to be_a String
+      expect(forecast[:attributes][:daily_weather][0][:date]).to be_a String
+      expect(forecast[:attributes][:daily_weather][0][:sunrise]).to be_a String
+      expect(forecast[:attributes][:daily_weather][0][:sunset]).to be_a String
+      expect(forecast[:attributes][:daily_weather][0][:max_temp]).to be_a Float
+      expect(forecast[:attributes][:daily_weather][0][:min_temp]).to be_a Float
+      expect(forecast[:attributes][:daily_weather][0][:conditions]).to be_a String
+      expect(forecast[:attributes][:daily_weather][0][:icon]).to be_a String
 
       #hourly_weather
       expect(forecast[:attributes][:hourly_weather]).to be_an Array
-      expect(forecast[:attributes][:hourly_weather][:time]).to be_a String
-      expect(forecast[:attributes][:hourly_weather][:temperature]).to be_a Float
-      expect(forecast[:attributes][:hourly_weather][:wind_speed]).to be_a String
-      expect(forecast[:attributes][:hourly_weather][:wind_direction]).to be_a String
-      expect(forecast[:attributes][:hourly_weather][:conditions]).to be_a String
-      expect(forecast[:attributes][:hourly_weather][:icon]).to be_a String
+      expect(forecast[:attributes][:hourly_weather][0][:time]).to be_a String
+      expect(forecast[:attributes][:hourly_weather][0][:temperature]).to be_a Float
+      expect(forecast[:attributes][:hourly_weather][0][:wind_speed]).to be_a String
+      expect(forecast[:attributes][:hourly_weather][0][:wind_direction]).to be_a String
+      expect(forecast[:attributes][:hourly_weather][0][:conditions]).to be_a String
+      expect(forecast[:attributes][:hourly_weather][0][:icon]).to be_a String
     end
   end
 end
