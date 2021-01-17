@@ -1,4 +1,6 @@
-#Sweater Weather
+# Sweater Weather
+![sweater-weather-gif](https://media.giphy.com/media/26u6dryuZH98z5KuY/giphy.gif)
+
 ## Table of Contents
 - [Overview](#overview)
 - [Getting Started](#getting-started)
@@ -9,19 +11,20 @@
     - [Schema](#schema)
     - [Endpoints](#endpoints)
 - [Contributor](#contributor)
+- [Acknowledgements](#Acknowledgements)
 
 ***
 ## Overview
 
 ***
 
-##Getting Started
+## Getting Started
 
-##Ruby & Rails versions
+## Ruby & Rails versions
 - Ruby 2.5.3
 - Rails 5.2.4.3
 
-##Local Setup Instructions
+## Local Setup Instructions
 1. Fork and clone this repo into a new directory.
 2. CD into `sweater_weather`
 3. Run `bundle install` to install gem packages.
@@ -56,5 +59,15 @@
 
 ***
 ## Contributor
-- Shaunda Cunningham (she/her)
-  - [GitHub: smcunning](https://github.com/smcunning)
+- Shaunda Cunningham ++ [![LinkedIn][linkedin-shield]](https://www.linkedin.com/in/shaunda-cunningham/) ++ [![GitHub][github-shield]](https://github.com/smcunning)
+
+***
+## Acknowledgements
+This application utilizes the following free API data:
+[MapQuest Geocoding API](https://developer.mapquest.com/documentation/geocoding-api/)
+[OpenWeather Map One Call API](https://openweathermap.org/api/one-call-api)
+
+
+<!-- MARKDOWN LINKS & IMAGES -->
+[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=flat-square&logo=linkedin&colorB=555
+[github-shield]: https://img.shields.io/badge/-GitHub-black.svg?style=flat-square&logo=github&colorB=555
