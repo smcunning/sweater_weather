@@ -56,6 +56,152 @@
 ### Schema
 
 ### Endpoints
+**Forecast by Location**
+`GET /api/v1/forecast?location=city,state`
+
+This endpoint retrieves weather forecast information based on a city/state combination. It references the MapQuest Geocoding API to find longitude and latitude coordinates which is passed to the OpenWeather One Call API to return a set of current, daily and hourly forecast information. The response is in JSON format.
+
+Response Example:
+
+```
+{
+    "data": {
+        "id": "null",
+        "type": "forecast",
+        "attributes": {
+            "current_weather": {
+                "datetime": "2021-01-17T16:38:59-07:00",
+                "sunrise": "2021-01-17T07:18:07-07:00",
+                "sunset": "2021-01-17T17:01:48-07:00",
+                "temperature": 47.61,
+                "feels_like": 36.88,
+                "humidity": 25,
+                "uvi": 0,
+                "visibility": 10000,
+                "conditions": "broken clouds",
+                "icon": "04d"
+            },
+            "daily_weather": [
+                {
+                    "date": "2021-01-17",
+                    "sunrise": "2021-01-17T07:18:07-07:00",
+                    "sunset": "2021-01-17T17:01:48-07:00",
+                    "max_temp": 47.61,
+                    "min_temp": 31.01,
+                    "conditions": "overcast clouds",
+                    "icon": "04d"
+                },
+                {
+                    "date": "2021-01-18",
+                    "sunrise": "2021-01-18T07:17:38-07:00",
+                    "sunset": "2021-01-18T17:02:55-07:00",
+                    "max_temp": 41.85,
+                    "min_temp": 29.14,
+                    "conditions": "clear sky",
+                    "icon": "01d"
+                },
+                {
+                    "date": "2021-01-19",
+                    "sunrise": "2021-01-19T07:17:07-07:00",
+                    "sunset": "2021-01-19T17:04:03-07:00",
+                    "max_temp": 35.1,
+                    "min_temp": 27.79,
+                    "conditions": "scattered clouds",
+                    "icon": "03d"
+                },
+                {
+                    "date": "2021-01-20",
+                    "sunrise": "2021-01-20T07:16:35-07:00",
+                    "sunset": "2021-01-20T17:05:12-07:00",
+                    "max_temp": 51.66,
+                    "min_temp": 32.04,
+                    "conditions": "clear sky",
+                    "icon": "01d"
+                },
+                {
+                    "date": "2021-01-21",
+                    "sunrise": "2021-01-21T07:16:00-07:00",
+                    "sunset": "2021-01-21T17:06:21-07:00",
+                    "max_temp": 48.07,
+                    "min_temp": 34.93,
+                    "conditions": "clear sky",
+                    "icon": "01d"
+                }
+            ],
+            "hourly_weather": [
+                {
+                    "time": "16:00",
+                    "temperature": 47.61,
+                    "wind_speed": "4.12 mph",
+                    "wind_direction": "↖ NW",
+                    "conditions": "broken clouds",
+                    "icon": "04d"
+                },
+                {
+                    "time": "17:00",
+                    "temperature": 45.37,
+                    "wind_speed": "3.85 mph",
+                    "wind_direction": "↑ N",
+                    "conditions": "broken clouds",
+                    "icon": "04d"
+                },
+                {
+                    "time": "18:00",
+                    "temperature": 43.39,
+                    "wind_speed": "2.68 mph",
+                    "wind_direction": "↗ NE",
+                    "conditions": "overcast clouds",
+                    "icon": "04n"
+                },
+                {
+                    "time": "19:00",
+                    "temperature": 41.76,
+                    "wind_speed": "1.57 mph",
+                    "wind_direction": "↓ S",
+                    "conditions": "overcast clouds",
+                    "icon": "04n"
+                },
+                {
+                    "time": "20:00",
+                    "temperature": 40.59,
+                    "wind_speed": "2.33 mph",
+                    "wind_direction": "↘ SE",
+                    "conditions": "overcast clouds",
+                    "icon": "04n"
+                }
+            ]
+        }
+    }
+}
+```
+
+**Background Image by Location**
+`GET /api/v1/backgrounds?location=city,state`
+
+This endpoint retrieves an image from the Unsplash API for the location query given. The endpoint also includes credit information for the author of the image and their website url. The response is returned in JSON format.
+
+Response Example:
+```
+{
+    "data": {
+        "id": "null",
+        "type": "background",
+        "attributes": {
+            "image": {
+                "image_url": "https://images.unsplash.com/photo-1584289537662-27851fd5ab5b?crop=entropy&cs=srgb&fm=jpg&ixid=MXwxOTkzMzN8MHwxfHNlYXJjaHwxfHxkZW52ZXIsY298ZW58MXwwfHw&ixlib=rb-1.2.1&q=85"
+            },
+            "credit": {
+                "author": "Sebastian Kurpiel",
+                "source": [
+                    "unsplash.com",
+                    "Sebastian Kurpiel"
+                ],
+                "author_website": "https://unsplash.com/@sebbykurps"
+            }
+        }
+    }
+}
+```
 
 ***
 ## Contributor
