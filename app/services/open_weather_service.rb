@@ -5,6 +5,7 @@ class OpenWeatherService
       req.params[:lat] = lat
       req.params[:lon] = lon
       req.params[:exclude] = 'minutely,alerts'
+      req.params[:units] = 'imperial'
     end
     parse(results)
   end
