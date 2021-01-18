@@ -1,6 +1,9 @@
 require 'rails_helper'
 
 describe 'User Registration Endpoint' do
+  before(:each) do
+    User.destroy_all
+  end
   it 'can create a user with a unique API key' do
     user_params = {
                     email: "example@example.com",
