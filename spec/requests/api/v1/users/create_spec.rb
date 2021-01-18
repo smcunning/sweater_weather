@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'rails_helper'
 
 describe 'User Registration Endpoint' do
@@ -6,19 +8,19 @@ describe 'User Registration Endpoint' do
   end
   it 'can create a user with a unique API key' do
     user_params = {
-                    email: "example@example.com",
-                    password: "password",
-                    password_confirmation: "password"
+      email: 'example@example.com',
+      password: 'password',
+      password_confirmation: 'password'
     }
 
-    headers = {"CONTENT_TYPE" => "application/json"}
+    headers = { 'CONTENT_TYPE' => 'application/json' }
 
     post '/api/v1/users', headers: headers, params: user_params, as: :json
     created_user = User.last
 
     expect(response).to be_successful
     expect(response.status).to eq(201)
-    expect(response.content_type).to include("application/json")
+    expect(response.content_type).to include('application/json')
 
     json = JSON.parse(response.body, symbolize_names: true)
 
@@ -37,12 +39,12 @@ describe 'User Registration Endpoint' do
 
   it 'cannot register a new user if passwords dont match' do
     user_params = {
-                    email: "example@example.com",
-                    password: "password",
-                    password_confirmation: "password1"
+      email: 'example@example.com',
+      password: 'password',
+      password_confirmation: 'password1'
     }
 
-    headers = {"CONTENT_TYPE" => "application/json"}
+    headers = { 'CONTENT_TYPE' => 'application/json' }
 
     post '/api/v1/users', headers: headers, params: user_params, as: :json
 
@@ -54,12 +56,12 @@ describe 'User Registration Endpoint' do
 
   it 'cannot register a new user if field left blank' do
     user_params = {
-                    email: "",
-                    password: "password",
-                    password_confirmation: "password"
+      email: '',
+      password: 'password',
+      password_confirmation: 'password'
     }
 
-    headers = {"CONTENT_TYPE" => "application/json"}
+    headers = { 'CONTENT_TYPE' => 'application/json' }
 
     post '/api/v1/users', headers: headers, params: user_params, as: :json
 
@@ -71,20 +73,20 @@ describe 'User Registration Endpoint' do
 
   it 'cannot register a new user if email already exists' do
     user_params = {
-                    email: "example@example.com",
-                    password: "password",
-                    password_confirmation: "password"
+      email: 'example@example.com',
+      password: 'password',
+      password_confirmation: 'password'
     }
 
-    headers = {"CONTENT_TYPE" => "application/json"}
+    headers = { 'CONTENT_TYPE' => 'application/json' }
 
     post '/api/v1/users', headers: headers, params: user_params, as: :json
 
-    #second post to attempt to create duplicate user
+    # second post to attempt to create duplicate user
     post '/api/v1/users', headers: headers, params: user_params, as: :json
 
     json = JSON.parse(response.body, symbolize_names: true)
     expect(json[:message]).to eq('unsuccessful')
-    expect(json[:error]).to eq("Email has already been taken")
+    expect(json[:error]).to eq('Email has already been taken')
   end
 end
