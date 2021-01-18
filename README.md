@@ -203,16 +203,35 @@ Response Example:
 }
 ```
 
+**Create User/User Registration**
+`POST /api/v1/users`
+
+The User Registration endpoint takes in a JSON request in the body and creates a user unless that user already exists in the database. In addition, the User model generates a unique API Key for that user and saves it along with their email address and encrypted password. The endpoint sends back that user's email address and API key in the body of the response. 
+
+Response Example:
+```
+{
+    "data": {
+        "id": "38",
+        "type": "user",
+        "attributes": {
+            "email": "whatever1@example.com",
+            "api_key": "eb7ccd1c-c4db-4bf2-890d-a16249cdb654"
+        }
+    }
+}
+```
+
 ***
 ## Contributor
 - Shaunda Cunningham ++ [![LinkedIn][linkedin-shield]](https://www.linkedin.com/in/shaunda-cunningham/) ++ [![GitHub][github-shield]](https://github.com/smcunning)
 
 ***
 ## Acknowledgements
-This application utilizes the following free API data:
+This application utilizes the following free API datasets:
 [MapQuest Geocoding API](https://developer.mapquest.com/documentation/geocoding-api/)
 [OpenWeather Map One Call API](https://openweathermap.org/api/one-call-api)
-
+[Unsplash API](https://unsplash.com/documentation)
 
 <!-- MARKDOWN LINKS & IMAGES -->
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=flat-square&logo=linkedin&colorB=555
