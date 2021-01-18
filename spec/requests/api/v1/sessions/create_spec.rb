@@ -1,10 +1,12 @@
+# frozen_string_literal: true
+
 require 'rails_helper'
 
 describe 'Login Endpoint' do
   before(:each) do
     User.destroy_all
 
-  #create a user to test login
+    # create a user to test login
     user_params = {
       email: 'example@example.com',
       password: 'password',

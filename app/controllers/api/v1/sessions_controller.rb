@@ -6,7 +6,7 @@ module Api
       def create
         login_creds = JSON.parse(request.body.string, symbolize_names: true)
         user = User.find_by(email: login_creds[:email])
-        if user && user.authenticate(login_creds[:password])
+        if user&.authenticate(login_creds[:password])
           render json: UserSerializer.new(user), status: :ok
         else
           render json: { message: 'unsuccessful', error: 'Credentials are bad.' },
