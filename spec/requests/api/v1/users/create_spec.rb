@@ -48,16 +48,15 @@ describe 'User Registration Endpoint' do
 
     json = JSON.parse(response.body, symbolize_names: true)
 
-    expect(json[:status]).to eq('error')
-    expect(json[:code]).to eq(400)
-    expect(json[:message]).to eq("password and password confirmation  must match")
+    expect(json[:message]).to eq('unsuccessful')
+    expect(json[:error]).to eq("Password confirmation doesn't match Password")
   end
 
   it 'cannot register a new user if field left blank' do
     user_params = {
                     email: "",
                     password: "password",
-                    password_confirmation: "password1"
+                    password_confirmation: "password"
     }
 
     headers = {"CONTENT_TYPE" => "application/json"}
@@ -66,16 +65,15 @@ describe 'User Registration Endpoint' do
 
     json = JSON.parse(response.body, symbolize_names: true)
 
-    expect(json[:status]).to eq('error')
-    expect(json[:code]).to eq(400)
-    expect(json[:message]).to eq("email, password, and password confirmation must be present.")
+    expect(json[:message]).to eq('unsuccessful')
+    expect(json[:error]).to eq("Email can't be blank")
   end
 
   it 'cannot register a new user if email already exists' do
     user_params = {
-                    email: "",
+                    email: "example@example.com",
                     password: "password",
-                    password_confirmation: "password1"
+                    password_confirmation: "password"
     }
 
     headers = {"CONTENT_TYPE" => "application/json"}
@@ -86,9 +84,7 @@ describe 'User Registration Endpoint' do
     post '/api/v1/users', headers: headers, params: user_params, as: :json
 
     json = JSON.parse(response.body, symbolize_names: true)
-
-    expect(json[:status]).to eq('error')
-    expect(json[:code]).to eq(400)
-    expect(json[:message]).to eq("an account already exists for that email.")
+    expect(json[:message]).to eq('unsuccessful')
+    expect(json[:error]).to eq("Email has already been taken")
   end
 end
