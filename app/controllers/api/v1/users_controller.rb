@@ -4,7 +4,7 @@ module Api
   module V1
     class UsersController < ApplicationController
       def create
-        render json: UserFacade.create_user(request.body), status: :created
+        render json: UserFacade.create_user(request.body.string), status: :created
       end
     end
   end
