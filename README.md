@@ -206,7 +206,7 @@ Response Example:
 **Create User/User Registration**
 `POST /api/v1/users`
 
-The User Registration endpoint takes in a JSON request in the body and creates a user unless that user already exists in the database. In addition, the User model generates a unique API Key for that user and saves it along with their email address and encrypted password. The endpoint sends back that user's email address and API key in the body of the response. 
+The User Registration endpoint takes in a JSON request in the body and creates a user unless that user already exists in the database. In addition, the User model generates a unique API Key for that user and saves it along with their email address and encrypted password. The endpoint sends back that user's email address and API key in the body of the response.
 
 Response Example:
 ```
@@ -217,6 +217,25 @@ Response Example:
         "attributes": {
             "email": "whatever1@example.com",
             "api_key": "eb7ccd1c-c4db-4bf2-890d-a16249cdb654"
+        }
+    }
+}
+```
+
+**User Login**
+`POST /api/v1/sessions`
+
+The login endpoint is able to receive a JSON body request with an email address and password, authenticate that user, and return that user's email address and API key in the body of the response.
+
+Response Example:
+```
+{
+    "data": {
+        "id": "15",
+        "type": "user",
+        "attributes": {
+            "email": "whatever@example.com",
+            "api_key": "14de802c-be17-49ca-9d8f-27e0a8fae00b"
         }
     }
 }
