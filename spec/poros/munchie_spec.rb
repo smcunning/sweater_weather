@@ -12,7 +12,7 @@ describe Munchie do
       expect(munchie.forecast).to have_key :summary
       expect(munchie.forecast[:summary]).to be_a String
       expect(munchie.forecast).to have_key :temperature
-      expect(munchie.forecast[:temperature]).to be_a Float
+      expect(munchie.forecast[:temperature]).to be_a Integer
       expect(munchie.travel_time).to be_a String
       expect(munchie.destination_city).to be_a String
       expect(munchie.restaurant).to be_a Hash
