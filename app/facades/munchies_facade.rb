@@ -19,6 +19,7 @@ class MunchiesFacade
 
   def self.restaurant(end_city, hour, category)
     restaurant = YelpService.businesses(end_city, hour, category)
+    require "pry"; binding.pry
     {
       name: restaurant[:businesses][0][:name],
       address: restaurant[:businesses][0][:location][:display_address].to_s
