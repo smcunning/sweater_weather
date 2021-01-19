@@ -1,0 +1,673 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://www.mapquestapi.com/directions/v2/route?from=denver,co&key=rp1f9XADEHpB3wKdibyo7JAEtWcLxHr3&to=pueblo,co
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.3.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 19 Jan 2021 18:10:32 GMT
+      Content-Type:
+      - application/json;charset=UTF-8
+      Transfer-Encoding:
+      - chunked
+      Server:
+      - Apache-Coyote/1.1
+      Set-Cookie:
+      - JSESSIONID=84EBF7BD5BA78FCB622CD2E4A62F9E58; Path=/directions; HttpOnly
+      Expires:
+      - Mon, 20 Dec 1998 01:00:00 GMT
+      Last-Modified:
+      - Tue, 19 Jan 2021 18:10:32 GMT
+      Cache-Control:
+      - no-cache, must-revalidate
+      Pragma:
+      - no-cache
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Methods:
+      - OPTIONS,GET,POST
+      Status:
+      - success
+      Transactionweight:
+      - '1'
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJyb3V0ZSI6eyJoYXNUb2xsUm9hZCI6ZmFsc2UsImhhc0JyaWRnZSI6dHJ1ZSwiYm91bmRpbmdCb3giOnsibHIiOnsibG5nIjotMTA0LjYwNTA4NywibGF0IjozOC4yNjU0Mjd9LCJ1bCI6eyJsbmciOi0xMDQuOTg3NjEsImxhdCI6MzkuNzM4NDUzfX0sImRpc3RhbmNlIjoxMTEuMzgsImhhc1RpbWVkUmVzdHJpY3Rpb24iOmZhbHNlLCJoYXNUdW5uZWwiOmZhbHNlLCJoYXNIaWdod2F5Ijp0cnVlLCJjb21wdXRlZFdheXBvaW50cyI6W10sInJvdXRlRXJyb3IiOnsiZXJyb3JDb2RlIjotNDAwLCJtZXNzYWdlIjoiIn0sImZvcm1hdHRlZFRpbWUiOiIwMTo0NDoyMiIsInNlc3Npb25JZCI6IjYwMDcyMDk4LTAzMTYtNWYyMS0wMmI0LTMzMDUtMDYxMjk0NTU2MmFmIiwiaGFzQWNjZXNzUmVzdHJpY3Rpb24iOmZhbHNlLCJyZWFsVGltZSI6Njc0MywiaGFzU2Vhc29uYWxDbG9zdXJlIjpmYWxzZSwiaGFzQ291bnRyeUNyb3NzIjpmYWxzZSwiZnVlbFVzZWQiOjUuNSwibGVncyI6W3siaGFzVG9sbFJvYWQiOmZhbHNlLCJoYXNCcmlkZ2UiOnRydWUsImRlc3ROYXJyYXRpdmUiOiJQcm9jZWVkIHRvIFBVRUJMTywgQ08uIiwiZGlzdGFuY2UiOjExMS4zOCwiaGFzVGltZWRSZXN0cmljdGlvbiI6ZmFsc2UsImhhc1R1bm5lbCI6ZmFsc2UsImhhc0hpZ2h3YXkiOnRydWUsImluZGV4IjowLCJmb3JtYXR0ZWRUaW1lIjoiMDE6NDQ6MjIiLCJvcmlnSW5kZXgiOjIsImhhc0FjY2Vzc1Jlc3RyaWN0aW9uIjpmYWxzZSwiaGFzU2Vhc29uYWxDbG9zdXJlIjpmYWxzZSwiaGFzQ291bnRyeUNyb3NzIjpmYWxzZSwicm9hZEdyYWRlU3RyYXRlZ3kiOltbXV0sImRlc3RJbmRleCI6NSwidGltZSI6NjI2MiwiaGFzVW5wYXZlZCI6ZmFsc2UsIm9yaWdOYXJyYXRpdmUiOiJHbyBzb3V0aCBvbiBOIEJyb2Fkd2F5LiIsIm1hbmV1dmVycyI6W3siZGlzdGFuY2UiOjAuMTA5LCJzdHJlZXRzIjpbIk4gU2hlcm1hbiBTdCJdLCJuYXJyYXRpdmUiOiJTdGFydCBvdXQgZ29pbmcgc291dGggb24gTiBTaGVybWFuIFN0IHRvd2FyZCBFIDEzdGggQXZlLiIsInR1cm5UeXBlIjowLCJzdGFydFBvaW50Ijp7ImxuZyI6LTEwNC45ODQ4NTYsImxhdCI6MzkuNzM4NDUzfSwiaW5kZXgiOjAsImZvcm1hdHRlZFRpbWUiOiIwMDowMDozMyIsImRpcmVjdGlvbk5hbWUiOiJTb3V0aCIsIm1hbmV1dmVyTm90ZXMiOltdLCJsaW5rSWRzIjpbXSwic2lnbnMiOltdLCJtYXBVcmwiOiJodHRwOi8vd3d3Lm1hcHF1ZXN0YXBpLmNvbS9zdGF0aWNtYXAvdjUvbWFwP2tleT1ycDFmOVhBREVIcEIzd0tkaWJ5bzdKQUV0V2NMeEhyMyZzaXplPTIyNSwxNjAmbG9jYXRpb25zPTM5LjczODQ1MjkxMTM3Njk1LC0xMDQuOTg0ODU1NjUxODU1NDd8bWFya2VyLTF8fDM5LjczNjg3NzQ0MTQwNjI1LC0xMDQuOTg0ODQwMzkzMDY2NHxtYXJrZXItMnx8JmNlbnRlcj0zOS43Mzc2NjUxNzYzOTE2LC0xMDQuOTg0ODQ4MDIyNDYwOTQmZGVmYXVsdE1hcmtlcj1ub25lJnpvb209MTMmcmFuZD0tNzI2MTkxNzUwJnNlc3Npb249NjAwNzIwOTgtMDMxNi01ZjIxLTAyYjQtMzMwNS0wNjEyOTQ1NTYyYWYiLCJ0cmFuc3BvcnRNb2RlIjoiQVVUTyIsImF0dHJpYnV0ZXMiOjAsInRpbWUiOjMzLCJpY29uVXJsIjoiaHR0cDovL2NvbnRlbnQubXFjZG4uY29tL21xc2l0ZS90dXJuc2lnbnMvaWNvbi1kaXJzLXN0YXJ0X3NtLmdpZiIsImRpcmVjdGlvbiI6NH0seyJkaXN0YW5jZSI6MC4xMzUsInN0cmVldHMiOlsiRSAxM3RoIEF2ZSJdLCJuYXJyYXRpdmUiOiJUdXJuIHJpZ2h0IG9udG8gRSAxM3RoIEF2ZS4iLCJ0dXJuVHlwZSI6Miwic3RhcnRQb2ludCI6eyJsbmciOi0xMDQuOTg0ODQsImxhdCI6MzkuNzM2ODc3fSwiaW5kZXgiOjEsImZvcm1hdHRlZFRpbWUiOiIwMDowMDoyMiIsImRpcmVjdGlvbk5hbWUiOiJXZXN0IiwibWFuZXV2ZXJOb3RlcyI6W10sImxpbmtJZHMiOltdLCJzaWducyI6W10sIm1hcFVybCI6Imh0dHA6Ly93d3cubWFwcXVlc3RhcGkuY29tL3N0YXRpY21hcC92NS9tYXA/a2V5PXJwMWY5WEFERUhwQjN3S2RpYnlvN0pBRXRXY0x4SHIzJnNpemU9MjI1LDE2MCZsb2NhdGlvbnM9MzkuNzM2ODc3NDQxNDA2MjUsLTEwNC45ODQ4NDAzOTMwNjY0fG1hcmtlci0yfHwzOS43MzY4Njk4MTIwMTE3MiwtMTA0Ljk4NzM3MzM1MjA1MDc4fG1hcmtlci0zfHwmY2VudGVyPTM5LjczNjg3MzYyNjcwODk4NCwtMTA0Ljk4NjEwNjg3MjU1ODYmZGVmYXVsdE1hcmtlcj1ub25lJnpvb209MTMmcmFuZD0tNzI2MTkxNzUwJnNlc3Npb249NjAwNzIwOTgtMDMxNi01ZjIxLTAyYjQtMzMwNS0wNjEyOTQ1NTYyYWYiLCJ0cmFuc3BvcnRNb2RlIjoiQVVUTyIsImF0dHJpYnV0ZXMiOjAsInRpbWUiOjIyLCJpY29uVXJsIjoiaHR0cDovL2NvbnRlbnQubXFjZG4uY29tL21xc2l0ZS90dXJuc2lnbnMvcnNfcmlnaHRfc20uZ2lmIiwiZGlyZWN0aW9uIjo3fSx7ImRpc3RhbmNlIjoyLjQ4NSwic3RyZWV0cyI6WyJOIEJyb2Fkd2F5Il0sIm5hcnJhdGl2ZSI6IlR1cm4gbGVmdCBvbnRvIE4gQnJvYWR3YXkuIiwidHVyblR5cGUiOjYsInN0YXJ0UG9pbnQiOnsibG5nIjotMTA0Ljk4NzM3MywibGF0IjozOS43MzY4N30sImluZGV4IjoyLCJmb3JtYXR0ZWRUaW1lIjoiMDA6MDY6MDAiLCJkaXJlY3Rpb25OYW1lIjoiU291dGgiLCJtYW5ldXZlck5vdGVzIjpbXSwibGlua0lkcyI6W10sInNpZ25zIjpbXSwibWFwVXJsIjoiaHR0cDovL3d3dy5tYXBxdWVzdGFwaS5jb20vc3RhdGljbWFwL3Y1L21hcD9rZXk9cnAxZjlYQURFSHBCM3dLZGlieW83SkFFdFdjTHhIcjMmc2l6ZT0yMjUsMTYwJmxvY2F0aW9ucz0zOS43MzY4Njk4MTIwMTE3MiwtMTA0Ljk4NzM3MzM1MjA1MDc4fG1hcmtlci0zfHwzOS43MDA4NTE0NDA0Mjk2OSwtMTA0Ljk4NzYwOTg2MzI4MTI1fG1hcmtlci00fHwmY2VudGVyPTM5LjcxODg2MDYyNjIyMDcsLTEwNC45ODc0OTE2MDc2NjYwMiZkZWZhdWx0TWFya2VyPW5vbmUmem9vbT04JnJhbmQ9LTcyNjE5MTc1MCZzZXNzaW9uPTYwMDcyMDk4LTAzMTYtNWYyMS0wMmI0LTMzMDUtMDYxMjk0NTU2MmFmIiwidHJhbnNwb3J0TW9kZSI6IkFVVE8iLCJhdHRyaWJ1dGVzIjoxMDI0LCJ0aW1lIjozNjAsImljb25VcmwiOiJodHRwOi8vY29udGVudC5tcWNkbi5jb20vbXFzaXRlL3R1cm5zaWducy9yc19sZWZ0X3NtLmdpZiIsImRpcmVjdGlvbiI6NH0seyJkaXN0YW5jZSI6MC4wMTQsInN0cmVldHMiOltdLCJuYXJyYXRpdmUiOiJUdXJuIGxlZnQgdG8gdGFrZSB0aGUgSS0yNSBTIHJhbXAgdG93YXJkIENvbG8gU3Bncy4iLCJ0dXJuVHlwZSI6MTMsInN0YXJ0UG9pbnQiOnsibG5nIjotMTA0Ljk4NzYxLCJsYXQiOjM5LjcwMDg1MX0sImluZGV4IjozLCJmb3JtYXR0ZWRUaW1lIjoiMDA6MDA6MDciLCJkaXJlY3Rpb25OYW1lIjoiU291dGhlYXN0IiwibWFuZXV2ZXJOb3RlcyI6W10sImxpbmtJZHMiOltdLCJzaWducyI6W10sIm1hcFVybCI6Imh0dHA6Ly93d3cubWFwcXVlc3RhcGkuY29tL3N0YXRpY21hcC92NS9tYXA/a2V5PXJwMWY5WEFERUhwQjN3S2RpYnlvN0pBRXRXY0x4SHIzJnNpemU9MjI1LDE2MCZsb2NhdGlvbnM9MzkuNzAwODUxNDQwNDI5NjksLTEwNC45ODc2MDk4NjMyODEyNXxtYXJrZXItNHx8MzkuNzAwNzMzMTg0ODE0NDUsLTEwNC45ODczOTYyNDAyMzQzOHxtYXJrZXItNXx8JmNlbnRlcj0zOS43MDA3OTIzMTI2MjIwNywtMTA0Ljk4NzUwMzA1MTc1NzgxJmRlZmF1bHRNYXJrZXI9bm9uZSZ6b29tPTE1JnJhbmQ9LTcyNjE5MTc1MCZzZXNzaW9uPTYwMDcyMDk4LTAzMTYtNWYyMS0wMmI0LTMzMDUtMDYxMjk0NTU2MmFmIiwidHJhbnNwb3J0TW9kZSI6IkFVVE8iLCJhdHRyaWJ1dGVzIjowLCJ0aW1lIjo3LCJpY29uVXJsIjoiaHR0cDovL2NvbnRlbnQubXFjZG4uY29tL21xc2l0ZS90dXJuc2lnbnMvcnNfcmFtcF9zbS5naWYiLCJkaXJlY3Rpb24iOjV9LHsiZGlzdGFuY2UiOjEwOC4wNDgsInN0cmVldHMiOlsiSS0yNSBTIl0sIm5hcnJhdGl2ZSI6Ik1lcmdlIG9udG8gSS0yNSBTLiIsInR1cm5UeXBlIjoxMCwic3RhcnRQb2ludCI6eyJsbmciOi0xMDQuOTg3Mzk2LCJsYXQiOjM5LjcwMDczM30sImluZGV4Ijo0LCJmb3JtYXR0ZWRUaW1lIjoiMDE6MzU6NTYiLCJkaXJlY3Rpb25OYW1lIjoiU291dGgiLCJtYW5ldXZlck5vdGVzIjpbXSwibGlua0lkcyI6W10sInNpZ25zIjpbeyJleHRyYVRleHQiOiIiLCJ0ZXh0IjoiMjUiLCJ0eXBlIjoxLCJ1cmwiOiJodHRwOi8vaWNvbnMubXFjZG4uY29tL2ljb25zL3JzMS5wbmc/bj0yNSZkPVNPVVRIIiwiZGlyZWN0aW9uIjo0fV0sIm1hcFVybCI6Imh0dHA6Ly93d3cubWFwcXVlc3RhcGkuY29tL3N0YXRpY21hcC92NS9tYXA/a2V5PXJwMWY5WEFERUhwQjN3S2RpYnlvN0pBRXRXY0x4SHIzJnNpemU9MjI1LDE2MCZsb2NhdGlvbnM9MzkuNzAwNzMzMTg0ODE0NDUsLTEwNC45ODczOTYyNDAyMzQzOHxtYXJrZXItNXx8MzguMjcxMTEwNTM0NjY3OTcsLTEwNC42MDUwODcyODAyNzM0NHxtYXJrZXItNnx8JmNlbnRlcj0zOC45ODU5MjE4NTk3NDEyMSwtMTA0Ljc5NjI0MTc2MDI1MzkmZGVmYXVsdE1hcmtlcj1ub25lJnpvb209MyZyYW5kPS03MjYxOTE3NTAmc2Vzc2lvbj02MDA3MjA5OC0wMzE2LTVmMjEtMDJiNC0zMzA1LTA2MTI5NDU1NjJhZiIsInRyYW5zcG9ydE1vZGUiOiJBVVRPIiwiYXR0cmlidXRlcyI6MTE1MiwidGltZSI6NTc1NiwiaWNvblVybCI6Imh0dHA6Ly9jb250ZW50Lm1xY2RuLmNvbS9tcXNpdGUvdHVybnNpZ25zL3JzX21lcmdlX3JpZ2h0X3NtLmdpZiIsImRpcmVjdGlvbiI6NH0seyJkaXN0YW5jZSI6MC4yMjEsInN0cmVldHMiOltdLCJuYXJyYXRpdmUiOiJUYWtlIHRoZSAxc3QgU3RyZWV0IGV4aXQsIEVYSVQgOThCLiIsInR1cm5UeXBlIjoxNCwic3RhcnRQb2ludCI6eyJsbmciOi0xMDQuNjA1MDg3LCJsYXQiOjM4LjI3MTExMX0sImluZGV4Ijo1LCJmb3JtYXR0ZWRUaW1lIjoiMDA6MDA6MjUiLCJkaXJlY3Rpb25OYW1lIjoiU291dGgiLCJtYW5ldXZlck5vdGVzIjpbXSwibGlua0lkcyI6W10sInNpZ25zIjpbeyJleHRyYVRleHQiOiIiLCJ0ZXh0IjoiOThCIiwidHlwZSI6MTAwMSwidXJsIjoiaHR0cDovL2ljb25zLm1xY2RuLmNvbS9pY29ucy9yczEwMDEucG5nP249OThCJmQ9UklHSFQiLCJkaXJlY3Rpb24iOjB9XSwibWFwVXJsIjoiaHR0cDovL3d3dy5tYXBxdWVzdGFwaS5jb20vc3RhdGljbWFwL3Y1L21hcD9rZXk9cnAxZjlYQURFSHBCM3dLZGlieW83SkFFdFdjTHhIcjMmc2l6ZT0yMjUsMTYwJmxvY2F0aW9ucz0zOC4yNzExMTA1MzQ2Njc5NywtMTA0LjYwNTA4NzI4MDI3MzQ0fG1hcmtlci02fHwzOC4yNjc5NzEwMzg4MTgzNiwtMTA0LjYwNTYxMzcwODQ5NjF8bWFya2VyLTd8fCZjZW50ZXI9MzguMjY5NTQwNzg2NzQzMTY0LC0xMDQuNjA1MzUwNDk0Mzg0NzcmZGVmYXVsdE1hcmtlcj1ub25lJnpvb209MTEmcmFuZD0tNzI2MTkxNzUwJnNlc3Npb249NjAwNzIwOTgtMDMxNi01ZjIxLTAyYjQtMzMwNS0wNjEyOTQ1NTYyYWYiLCJ0cmFuc3BvcnRNb2RlIjoiQVVUTyIsImF0dHJpYnV0ZXMiOjEwMjQsInRpbWUiOjI1LCJpY29uVXJsIjoiaHR0cDovL2NvbnRlbnQubXFjZG4uY29tL21xc2l0ZS90dXJuc2lnbnMvcnNfZ3JfZXhpdHJpZ2h0X3NtLmdpZiIsImRpcmVjdGlvbiI6NH0seyJkaXN0YW5jZSI6MC4wNzgsInN0cmVldHMiOlsiRSAxc3QgU3QiXSwibmFycmF0aXZlIjoiVHVybiByaWdodCBvbnRvIEUgMXN0IFN0LiIsInR1cm5UeXBlIjoyLCJzdGFydFBvaW50Ijp7ImxuZyI6LTEwNC42MDU2MTQsImxhdCI6MzguMjY3OTcxfSwiaW5kZXgiOjYsImZvcm1hdHRlZFRpbWUiOiIwMDowMDoxNyIsImRpcmVjdGlvbk5hbWUiOiJXZXN0IiwibWFuZXV2ZXJOb3RlcyI6W10sImxpbmtJZHMiOltdLCJzaWducyI6W10sIm1hcFVybCI6Imh0dHA6Ly93d3cubWFwcXVlc3RhcGkuY29tL3N0YXRpY21hcC92NS9tYXA/a2V5PXJwMWY5WEFERUhwQjN3S2RpYnlvN0pBRXRXY0x4SHIzJnNpemU9MjI1LDE2MCZsb2NhdGlvbnM9MzguMjY3OTcxMDM4ODE4MzYsLTEwNC42MDU2MTM3MDg0OTYxfG1hcmtlci03fHwzOC4yNjc5NDA1MjEyNDAyMzQsLTEwNC42MDcwNDgwMzQ2Njc5N3xtYXJrZXItOHx8JmNlbnRlcj0zOC4yNjc5NTU3ODAwMjkzLC0xMDQuNjA2MzMwODcxNTgyMDMmZGVmYXVsdE1hcmtlcj1ub25lJnpvb209MTUmcmFuZD0tNzI2MTkxNzUwJnNlc3Npb249NjAwNzIwOTgtMDMxNi01ZjIxLTAyYjQtMzMwNS0wNjEyOTQ1NTYyYWYiLCJ0cmFuc3BvcnRNb2RlIjoiQVVUTyIsImF0dHJpYnV0ZXMiOjAsInRpbWUiOjE3LCJpY29uVXJsIjoiaHR0cDovL2NvbnRlbnQubXFjZG4uY29tL21xc2l0ZS90dXJuc2lnbnMvcnNfcmlnaHRfc20uZ2lmIiwiZGlyZWN0aW9uIjo3fSx7ImRpc3RhbmNlIjowLjA3OSwic3RyZWV0cyI6WyJXIENpdHkgQ2VudGVyIERyIl0sIm5hcnJhdGl2ZSI6IkUgMXN0IFN0IGJlY29tZXMgVyBDaXR5IENlbnRlciBEci4iLCJ0dXJuVHlwZSI6MCwic3RhcnRQb2ludCI6eyJsbmciOi0xMDQuNjA3MDQ4LCJsYXQiOjM4LjI2Nzk0MX0sImluZGV4Ijo3LCJmb3JtYXR0ZWRUaW1lIjoiMDA6MDA6MTciLCJkaXJlY3Rpb25OYW1lIjoiV2VzdCIsIm1hbmV1dmVyTm90ZXMiOltdLCJsaW5rSWRzIjpbXSwic2lnbnMiOltdLCJtYXBVcmwiOiJodHRwOi8vd3d3Lm1hcHF1ZXN0YXBpLmNvbS9zdGF0aWNtYXAvdjUvbWFwP2tleT1ycDFmOVhBREVIcEIzd0tkaWJ5bzdKQUV0V2NMeEhyMyZzaXplPTIyNSwxNjAmbG9jYXRpb25zPTM4LjI2Nzk0MDUyMTI0MDIzNCwtMTA0LjYwNzA0ODAzNDY2Nzk3fG1hcmtlci04fHwzOC4yNjc5MTM4MTgzNTkzNzUsLTEwNC42MDg1MDUyNDkwMjM0NHxtYXJrZXItOXx8JmNlbnRlcj0zOC4yNjc5MjcxNjk3OTk4MDUsLTEwNC42MDc3NzY2NDE4NDU3JmRlZmF1bHRNYXJrZXI9bm9uZSZ6b29tPTE1JnJhbmQ9LTcyNjE5MTc1MCZzZXNzaW9uPTYwMDcyMDk4LTAzMTYtNWYyMS0wMmI0LTMzMDUtMDYxMjk0NTU2MmFmIiwidHJhbnNwb3J0TW9kZSI6IkFVVE8iLCJhdHRyaWJ1dGVzIjowLCJ0aW1lIjoxNywiaWNvblVybCI6Imh0dHA6Ly9jb250ZW50Lm1xY2RuLmNvbS9tcXNpdGUvdHVybnNpZ25zL3JzX3N0cmFpZ2h0X3NtLmdpZiIsImRpcmVjdGlvbiI6N30seyJkaXN0YW5jZSI6MC4yMTEsInN0cmVldHMiOlsiQ2VudHJhbCBNYWluIFN0Il0sIm5hcnJhdGl2ZSI6IlR1cm4gbGVmdCBvbnRvIENlbnRyYWwgTWFpbiBTdC4iLCJ0dXJuVHlwZSI6Niwic3RhcnRQb2ludCI6eyJsbmciOi0xMDQuNjA4NTA1LCJsYXQiOjM4LjI2NzkxNH0sImluZGV4Ijo4LCJmb3JtYXR0ZWRUaW1lIjoiMDA6MDA6MjUiLCJkaXJlY3Rpb25OYW1lIjoiU291dGh3ZXN0IiwibWFuZXV2ZXJOb3RlcyI6W10sImxpbmtJZHMiOltdLCJzaWducyI6W10sIm1hcFVybCI6Imh0dHA6Ly93d3cubWFwcXVlc3RhcGkuY29tL3N0YXRpY21hcC92NS9tYXA/a2V5PXJwMWY5WEFERUhwQjN3S2RpYnlvN0pBRXRXY0x4SHIzJnNpemU9MjI1LDE2MCZsb2NhdGlvbnM9MzguMjY3OTEzODE4MzU5Mzc1LC0xMDQuNjA4NTA1MjQ5MDIzNDR8bWFya2VyLTl8fDM4LjI2NTQyNjYzNTc0MjE5LC0xMDQuNjEwNDEyNTk3NjU2MjV8bWFya2VyLTEwfHwmY2VudGVyPTM4LjI2NjY3MDIyNzA1MDc4LC0xMDQuNjA5NDU4OTIzMzM5ODQmZGVmYXVsdE1hcmtlcj1ub25lJnpvb209MTImcmFuZD0tNzI2MTkxNzUwJnNlc3Npb249NjAwNzIwOTgtMDMxNi01ZjIxLTAyYjQtMzMwNS0wNjEyOTQ1NTYyYWYiLCJ0cmFuc3BvcnRNb2RlIjoiQVVUTyIsImF0dHJpYnV0ZXMiOjAsInRpbWUiOjI1LCJpY29uVXJsIjoiaHR0cDovL2NvbnRlbnQubXFjZG4uY29tL21xc2l0ZS90dXJuc2lnbnMvcnNfbGVmdF9zbS5naWYiLCJkaXJlY3Rpb24iOjZ9LHsiZGlzdGFuY2UiOjAsInN0cmVldHMiOltdLCJuYXJyYXRpdmUiOiJXZWxjb21lIHRvIFBVRUJMTywgQ08uIiwidHVyblR5cGUiOi0xLCJzdGFydFBvaW50Ijp7ImxuZyI6LTEwNC42MTA0MTMsImxhdCI6MzguMjY1NDI3fSwiaW5kZXgiOjksImZvcm1hdHRlZFRpbWUiOiIwMDowMDowMCIsImRpcmVjdGlvbk5hbWUiOiIiLCJtYW5ldXZlck5vdGVzIjpbXSwibGlua0lkcyI6W10sInNpZ25zIjpbXSwidHJhbnNwb3J0TW9kZSI6IkFVVE8iLCJhdHRyaWJ1dGVzIjowLCJ0aW1lIjowLCJpY29uVXJsIjoiaHR0cDovL2NvbnRlbnQubXFjZG4uY29tL21xc2l0ZS90dXJuc2lnbnMvaWNvbi1kaXJzLWVuZF9zbS5naWYiLCJkaXJlY3Rpb24iOjB9XSwiaGFzRmVycnkiOmZhbHNlfV0sIm9wdGlvbnMiOnsiYXJ0ZXJ5V2VpZ2h0cyI6W10sImN5Y2xpbmdSb2FkRmFjdG9yIjoxLCJ0aW1lVHlwZSI6MCwidXNlVHJhZmZpYyI6ZmFsc2UsInJldHVybkxpbmtEaXJlY3Rpb25zIjpmYWxzZSwiY291bnRyeUJvdW5kYXJ5RGlzcGxheSI6dHJ1ZSwiZW5oYW5jZWROYXJyYXRpdmUiOmZhbHNlLCJsb2NhbGUiOiJlbl9VUyIsInRyeUF2b2lkTGlua0lkcyI6W10sImRyaXZpbmdTdHlsZSI6MiwiZG9SZXZlcnNlR2VvY29kZSI6dHJ1ZSwiZ2VuZXJhbGl6ZSI6LTEsIm11c3RBdm9pZExpbmtJZHMiOltdLCJzaWRlT2ZTdHJlZXREaXNwbGF5Ijp0cnVlLCJyb3V0ZVR5cGUiOiJGQVNURVNUIiwiYXZvaWRUaW1lZENvbmRpdGlvbnMiOmZhbHNlLCJyb3V0ZU51bWJlciI6MCwic2hhcGVGb3JtYXQiOiJyYXciLCJtYXhXYWxraW5nRGlzdGFuY2UiOi0xLCJkZXN0aW5hdGlvbk1hbmV1dmVyRGlzcGxheSI6dHJ1ZSwidHJhbnNmZXJQZW5hbHR5IjotMSwibmFycmF0aXZlVHlwZSI6InRleHQiLCJ3YWxraW5nU3BlZWQiOi0xLCJ1cmJhbkF2b2lkRmFjdG9yIjotMSwic3RhdGVCb3VuZGFyeURpc3BsYXkiOnRydWUsInVuaXQiOiJNIiwiaGlnaHdheUVmZmljaWVuY3kiOjIyLCJtYXhMaW5rSWQiOjAsIm1hbmV1dmVyUGVuYWx0eSI6LTEsImF2b2lkVHJpcElkcyI6W10sImZpbHRlclpvbmVGYWN0b3IiOi0xLCJtYW5tYXBzIjoidHJ1ZSJ9LCJsb2NhdGlvbnMiOlt7ImRyYWdQb2ludCI6ZmFsc2UsImRpc3BsYXlMYXRMbmciOnsibG5nIjotMTA0Ljk4NDg1NiwibGF0IjozOS43Mzg0NTN9LCJhZG1pbkFyZWE0IjoiRGVudmVyIENvdW50eSIsImFkbWluQXJlYTUiOiJEZW52ZXIiLCJwb3N0YWxDb2RlIjoiIiwiYWRtaW5BcmVhMSI6IlVTIiwiYWRtaW5BcmVhMyI6IkNPIiwidHlwZSI6InMiLCJzaWRlT2ZTdHJlZXQiOiJOIiwiZ2VvY29kZVF1YWxpdHlDb2RlIjoiQTVYQVgiLCJhZG1pbkFyZWE0VHlwZSI6IkNvdW50eSIsImxpbmtJZCI6NDAyODc4MTksInN0cmVldCI6IiIsImFkbWluQXJlYTVUeXBlIjoiQ2l0eSIsImdlb2NvZGVRdWFsaXR5IjoiQ0lUWSIsImFkbWluQXJlYTFUeXBlIjoiQ291bnRyeSIsImFkbWluQXJlYTNUeXBlIjoiU3RhdGUiLCJsYXRMbmciOnsibG5nIjotMTA0Ljk4NDg1MywibGF0IjozOS43Mzg0NTN9fSx7ImRyYWdQb2ludCI6ZmFsc2UsImRpc3BsYXlMYXRMbmciOnsibG5nIjotMTA0LjYxMDQxMywibGF0IjozOC4yNjU0Mjd9LCJhZG1pbkFyZWE0IjoiUHVlYmxvIENvdW50eSIsImFkbWluQXJlYTUiOiJQdWVibG8iLCJwb3N0YWxDb2RlIjoiIiwiYWRtaW5BcmVhMSI6IlVTIiwiYWRtaW5BcmVhMyI6IkNPIiwidHlwZSI6InMiLCJzaWRlT2ZTdHJlZXQiOiJOIiwiZ2VvY29kZVF1YWxpdHlDb2RlIjoiQTVYQVgiLCJhZG1pbkFyZWE0VHlwZSI6IkNvdW50eSIsImxpbmtJZCI6NTQ3NjA4ODksInN0cmVldCI6IiIsImFkbWluQXJlYTVUeXBlIjoiQ2l0eSIsImdlb2NvZGVRdWFsaXR5IjoiQ0lUWSIsImFkbWluQXJlYTFUeXBlIjoiQ291bnRyeSIsImFkbWluQXJlYTNUeXBlIjoiU3RhdGUiLCJsYXRMbmciOnsibG5nIjotMTA0LjYxMDQxNSwibGF0IjozOC4yNjU0MjV9fV0sInRpbWUiOjYyNjIsImhhc1VucGF2ZWQiOmZhbHNlLCJsb2NhdGlvblNlcXVlbmNlIjpbMCwxXSwiaGFzRmVycnkiOmZhbHNlfSwiaW5mbyI6eyJzdGF0dXNjb2RlIjowLCJjb3B5cmlnaHQiOnsiaW1hZ2VBbHRUZXh0IjoiwqkgMjAyMCBNYXBRdWVzdCwgSW5jLiIsImltYWdlVXJsIjoiaHR0cDovL2FwaS5tcWNkbi5jb20vcmVzL21xbG9nby5naWYiLCJ0ZXh0IjoiwqkgMjAyMCBNYXBRdWVzdCwgSW5jLiJ9LCJtZXNzYWdlcyI6W119fQ==
+  recorded_at: Tue, 19 Jan 2021 18:10:32 GMT
+- request:
+    method: get
+    uri: http://www.mapquestapi.com/geocoding/v1/address?key=rp1f9XADEHpB3wKdibyo7JAEtWcLxHr3&location=pueblo,co
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.3.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 19 Jan 2021 18:10:32 GMT
+      Content-Type:
+      - application/json;charset=UTF-8
+      Content-Length:
+      - '1734'
+      Access-Control-Allow-Methods:
+      - OPTIONS,GET,POST
+      Access-Control-Allow-Origin:
+      - "*"
+      Cache-Control:
+      - no-cache, must-revalidate
+      Expires:
+      - Mon, 20 Dec 1998 01:00:00 GMT
+      Geocodetransactioncount:
+      - '1'
+      Last-Modified:
+      - Tue, 19 Jan 2021 18:10:32 GMT
+      Pragma:
+      - no-cache
+      Reversegeocodetransactioncount:
+      - '0'
+      Server:
+      - Apache-Coyote/1.1
+      Set-Cookie:
+      - JSESSIONID=8FAA5B938D1E64E93B1E46F7C1FCE804; Path=/; HttpOnly
+      Status:
+      - success
+      Transactionweight:
+      - '1.0'
+    body:
+      encoding: UTF-8
+      string: '{"info":{"statuscode":0,"copyright":{"text":"\u00A9 2021 MapQuest,
+        Inc.","imageUrl":"http://api.mqcdn.com/res/mqlogo.gif","imageAltText":"\u00A9
+        2021 MapQuest, Inc."},"messages":[]},"options":{"maxResults":-1,"thumbMaps":true,"ignoreLatLngInput":false},"results":[{"providedLocation":{"location":"pueblo,co"},"locations":[{"street":"","adminArea6":"","adminArea6Type":"Neighborhood","adminArea5":"Pueblo","adminArea5Type":"City","adminArea4":"Pueblo
+        County","adminArea4Type":"County","adminArea3":"CO","adminArea3Type":"State","adminArea1":"US","adminArea1Type":"Country","postalCode":"","geocodeQualityCode":"A5XAX","geocodeQuality":"CITY","dragPoint":false,"sideOfStreet":"N","linkId":"282040865","unknownInput":"","type":"s","latLng":{"lat":38.265425,"lng":-104.610415},"displayLatLng":{"lat":38.265425,"lng":-104.610415},"mapUrl":"http://www.mapquestapi.com/staticmap/v5/map?key=rp1f9XADEHpB3wKdibyo7JAEtWcLxHr3&type=map&size=225,160&locations=38.265425,-104.610415|marker-sm-50318A-1&scalebar=true&zoom=12&rand=-703689342"},{"street":"","adminArea6":"","adminArea6Type":"Neighborhood","adminArea5":"","adminArea5Type":"City","adminArea4":"Pueblo
+        County","adminArea4Type":"County","adminArea3":"CO","adminArea3Type":"State","adminArea1":"US","adminArea1Type":"Country","postalCode":"","geocodeQualityCode":"A4XAX","geocodeQuality":"COUNTY","dragPoint":false,"sideOfStreet":"N","linkId":"282932014","unknownInput":"","type":"s","latLng":{"lat":38.265425,"lng":-104.610415},"displayLatLng":{"lat":38.265425,"lng":-104.610415},"mapUrl":"http://www.mapquestapi.com/staticmap/v5/map?key=rp1f9XADEHpB3wKdibyo7JAEtWcLxHr3&type=map&size=225,160&locations=38.265425,-104.610415|marker-sm-50318A-2&scalebar=true&zoom=9&rand=1315415421"}]}]}'
+  recorded_at: Tue, 19 Jan 2021 18:10:32 GMT
+- request:
+    method: get
+    uri: http://api.openweathermap.org/data/2.5/onecall?appid=4e0f08bca4789de7d6bdad1513caeba6&exclude=minutely,alerts&lat=38.265425&lon=-104.610415&units=imperial
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.3.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - openresty
+      Date:
+      - Tue, 19 Jan 2021 18:10:33 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '15909'
+      Connection:
+      - keep-alive
+      X-Cache-Key:
+      - "/data/2.5/onecall?exclude=minutely%2Calerts&lat=38.27&lon=-104.61&units=imperial"
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Methods:
+      - GET, POST
+    body:
+      encoding: UTF-8
+      string: '{"lat":38.2654,"lon":-104.6104,"timezone":"America/Denver","timezone_offset":-25200,"current":{"dt":1611079833,"sunrise":1611065519,"sunset":1611101172,"temp":31.62,"feels_like":23.83,"pressure":1032,"humidity":74,"dew_point":25.14,"uvi":1.8,"clouds":1,"visibility":10000,"wind_speed":5.75,"wind_deg":210,"weather":[{"id":800,"main":"Clear","description":"clear
+        sky","icon":"01d"}]},"hourly":[{"dt":1611079200,"temp":31.62,"feels_like":23.92,"pressure":1032,"humidity":74,"dew_point":25.14,"uvi":1.8,"clouds":1,"visibility":10000,"wind_speed":5.59,"wind_deg":245,"weather":[{"id":800,"main":"Clear","description":"clear
+        sky","icon":"01d"}],"pop":0.33},{"dt":1611082800,"temp":32.07,"feels_like":25.47,"pressure":1032,"humidity":80,"dew_point":27.23,"uvi":2.19,"clouds":49,"visibility":10000,"wind_speed":4.12,"wind_deg":218,"weather":[{"id":802,"main":"Clouds","description":"scattered
+        clouds","icon":"03d"}],"pop":0.04},{"dt":1611086400,"temp":33.19,"feels_like":26.13,"pressure":1031,"humidity":81,"dew_point":28.47,"uvi":1.95,"clouds":41,"visibility":10000,"wind_speed":5.21,"wind_deg":196,"weather":[{"id":802,"main":"Clouds","description":"scattered
+        clouds","icon":"03d"}],"pop":0},{"dt":1611090000,"temp":34.45,"feels_like":26.56,"pressure":1030,"humidity":80,"dew_point":29.28,"uvi":1.34,"clouds":36,"visibility":10000,"wind_speed":6.91,"wind_deg":198,"weather":[{"id":802,"main":"Clouds","description":"scattered
+        clouds","icon":"03d"}],"pop":0},{"dt":1611093600,"temp":35.24,"feels_like":27.18,"pressure":1029,"humidity":79,"dew_point":29.7,"uvi":0.73,"clouds":40,"visibility":10000,"wind_speed":7.34,"wind_deg":195,"weather":[{"id":802,"main":"Clouds","description":"scattered
+        clouds","icon":"03d"}],"pop":0},{"dt":1611097200,"temp":35.24,"feels_like":27.72,"pressure":1029,"humidity":80,"dew_point":22.91,"uvi":0.22,"clouds":34,"visibility":10000,"wind_speed":6.44,"wind_deg":177,"weather":[{"id":802,"main":"Clouds","description":"scattered
+        clouds","icon":"03d"}],"pop":0},{"dt":1611100800,"temp":32.31,"feels_like":25.99,"pressure":1030,"humidity":89,"dew_point":22.82,"uvi":0,"clouds":29,"visibility":10000,"wind_speed":4.23,"wind_deg":164,"weather":[{"id":802,"main":"Clouds","description":"scattered
+        clouds","icon":"03d"}],"pop":0},{"dt":1611104400,"temp":30.7,"feels_like":25.45,"pressure":1031,"humidity":91,"dew_point":22.53,"uvi":0,"clouds":3,"visibility":10000,"wind_speed":2.1,"wind_deg":178,"weather":[{"id":800,"main":"Clear","description":"clear
+        sky","icon":"01n"}],"pop":0},{"dt":1611108000,"temp":29.77,"feels_like":24.22,"pressure":1031,"humidity":92,"dew_point":22.12,"uvi":0,"clouds":1,"visibility":10000,"wind_speed":2.48,"wind_deg":185,"weather":[{"id":800,"main":"Clear","description":"clear
+        sky","icon":"01n"}],"pop":0},{"dt":1611111600,"temp":29.52,"feels_like":23.38,"pressure":1031,"humidity":91,"dew_point":21.61,"uvi":0,"clouds":1,"visibility":10000,"wind_speed":3.42,"wind_deg":175,"weather":[{"id":800,"main":"Clear","description":"clear
+        sky","icon":"01n"}],"pop":0},{"dt":1611115200,"temp":28.69,"feels_like":23.54,"pressure":1031,"humidity":92,"dew_point":20.97,"uvi":0,"clouds":1,"visibility":10000,"wind_speed":1.52,"wind_deg":152,"weather":[{"id":800,"main":"Clear","description":"clear
+        sky","icon":"01n"}],"pop":0},{"dt":1611118800,"temp":28.22,"feels_like":22.93,"pressure":1031,"humidity":91,"dew_point":20.21,"uvi":0,"clouds":1,"visibility":10000,"wind_speed":1.63,"wind_deg":177,"weather":[{"id":800,"main":"Clear","description":"clear
+        sky","icon":"01n"}],"pop":0},{"dt":1611122400,"temp":27.97,"feels_like":21.63,"pressure":1030,"humidity":91,"dew_point":19.87,"uvi":0,"clouds":1,"visibility":10000,"wind_speed":3.44,"wind_deg":189,"weather":[{"id":800,"main":"Clear","description":"clear
+        sky","icon":"01n"}],"pop":0},{"dt":1611126000,"temp":27.12,"feels_like":21.6,"pressure":1030,"humidity":92,"dew_point":19.85,"uvi":0,"clouds":0,"visibility":10000,"wind_speed":1.88,"wind_deg":235,"weather":[{"id":800,"main":"Clear","description":"clear
+        sky","icon":"01n"}],"pop":0},{"dt":1611129600,"temp":27.19,"feels_like":20.98,"pressure":1029,"humidity":91,"dew_point":19.56,"uvi":0,"clouds":0,"visibility":10000,"wind_speed":3.06,"wind_deg":278,"weather":[{"id":800,"main":"Clear","description":"clear
+        sky","icon":"01n"}],"pop":0},{"dt":1611133200,"temp":27.27,"feels_like":21.02,"pressure":1028,"humidity":91,"dew_point":19.06,"uvi":0,"clouds":0,"visibility":10000,"wind_speed":3.13,"wind_deg":226,"weather":[{"id":800,"main":"Clear","description":"clear
+        sky","icon":"01n"}],"pop":0},{"dt":1611136800,"temp":27.97,"feels_like":21.11,"pressure":1027,"humidity":90,"dew_point":18.48,"uvi":0,"clouds":0,"visibility":10000,"wind_speed":4.29,"wind_deg":274,"weather":[{"id":800,"main":"Clear","description":"clear
+        sky","icon":"01n"}],"pop":0},{"dt":1611140400,"temp":28.78,"feels_like":21.16,"pressure":1026,"humidity":88,"dew_point":17.65,"uvi":0,"clouds":0,"visibility":10000,"wind_speed":5.7,"wind_deg":261,"weather":[{"id":800,"main":"Clear","description":"clear
+        sky","icon":"01n"}],"pop":0},{"dt":1611144000,"temp":29.8,"feels_like":21.33,"pressure":1025,"humidity":87,"dew_point":17.49,"uvi":0,"clouds":0,"visibility":10000,"wind_speed":7.38,"wind_deg":265,"weather":[{"id":800,"main":"Clear","description":"clear
+        sky","icon":"01n"}],"pop":0},{"dt":1611147600,"temp":30.65,"feels_like":21.94,"pressure":1024,"humidity":87,"dew_point":17.89,"uvi":0,"clouds":0,"visibility":10000,"wind_speed":7.99,"wind_deg":261,"weather":[{"id":800,"main":"Clear","description":"clear
+        sky","icon":"01n"}],"pop":0},{"dt":1611151200,"temp":30.94,"feels_like":22.12,"pressure":1023,"humidity":87,"dew_point":18.23,"uvi":0,"clouds":0,"visibility":10000,"wind_speed":8.25,"wind_deg":272,"weather":[{"id":800,"main":"Clear","description":"clear
+        sky","icon":"01n"}],"pop":0},{"dt":1611154800,"temp":33.69,"feels_like":23.79,"pressure":1023,"humidity":81,"dew_point":19.06,"uvi":0.23,"clouds":0,"visibility":10000,"wind_speed":10.38,"wind_deg":283,"weather":[{"id":800,"main":"Clear","description":"clear
+        sky","icon":"01d"}],"pop":0},{"dt":1611158400,"temp":38.97,"feels_like":27.64,"pressure":1020,"humidity":67,"dew_point":21.11,"uvi":0.74,"clouds":0,"visibility":10000,"wind_speed":13.02,"wind_deg":288,"weather":[{"id":800,"main":"Clear","description":"clear
+        sky","icon":"01d"}],"pop":0},{"dt":1611162000,"temp":42.82,"feels_like":30.31,"pressure":1018,"humidity":59,"dew_point":23.14,"uvi":1.44,"clouds":0,"visibility":10000,"wind_speed":15.26,"wind_deg":288,"weather":[{"id":800,"main":"Clear","description":"clear
+        sky","icon":"01d"}],"pop":0},{"dt":1611165600,"temp":46.27,"feels_like":35.11,"pressure":1017,"humidity":53,"dew_point":25.25,"uvi":2.08,"clouds":0,"visibility":10000,"wind_speed":12.97,"wind_deg":278,"weather":[{"id":800,"main":"Clear","description":"clear
+        sky","icon":"01d"}],"pop":0},{"dt":1611169200,"temp":48.74,"feels_like":39.25,"pressure":1015,"humidity":49,"dew_point":27.05,"uvi":2.3,"clouds":0,"visibility":10000,"wind_speed":10.11,"wind_deg":271,"weather":[{"id":800,"main":"Clear","description":"clear
+        sky","icon":"01d"}],"pop":0},{"dt":1611172800,"temp":50.58,"feels_like":42.24,"pressure":1013,"humidity":46,"dew_point":28.27,"uvi":2.04,"clouds":0,"visibility":10000,"wind_speed":8.1,"wind_deg":262,"weather":[{"id":800,"main":"Clear","description":"clear
+        sky","icon":"01d"}],"pop":0},{"dt":1611176400,"temp":51.98,"feels_like":43.86,"pressure":1012,"humidity":45,"dew_point":29.32,"uvi":1.42,"clouds":0,"visibility":10000,"wind_speed":7.87,"wind_deg":240,"weather":[{"id":800,"main":"Clear","description":"clear
+        sky","icon":"01d"}],"pop":0},{"dt":1611180000,"temp":52.02,"feels_like":44.49,"pressure":1012,"humidity":45,"dew_point":31.12,"uvi":0.72,"clouds":0,"visibility":10000,"wind_speed":6.85,"wind_deg":239,"weather":[{"id":800,"main":"Clear","description":"clear
+        sky","icon":"01d"}],"pop":0},{"dt":1611183600,"temp":49.1,"feels_like":42.26,"pressure":1012,"humidity":51,"dew_point":32.02,"uvi":0.22,"clouds":0,"visibility":10000,"wind_speed":5.73,"wind_deg":239,"weather":[{"id":800,"main":"Clear","description":"clear
+        sky","icon":"01d"}],"pop":0},{"dt":1611187200,"temp":43.07,"feels_like":36.32,"pressure":1013,"humidity":63,"dew_point":30.78,"uvi":0,"clouds":0,"visibility":10000,"wind_speed":5.46,"wind_deg":239,"weather":[{"id":800,"main":"Clear","description":"clear
+        sky","icon":"01d"}],"pop":0},{"dt":1611190800,"temp":41.72,"feels_like":34.11,"pressure":1014,"humidity":65,"dew_point":28.18,"uvi":0,"clouds":0,"visibility":10000,"wind_speed":6.89,"wind_deg":272,"weather":[{"id":800,"main":"Clear","description":"clear
+        sky","icon":"01n"}],"pop":0},{"dt":1611194400,"temp":39.96,"feels_like":31.98,"pressure":1015,"humidity":68,"dew_point":26.31,"uvi":0,"clouds":0,"visibility":10000,"wind_speed":7.38,"wind_deg":276,"weather":[{"id":800,"main":"Clear","description":"clear
+        sky","icon":"01n"}],"pop":0},{"dt":1611198000,"temp":38.98,"feels_like":29.89,"pressure":1016,"humidity":70,"dew_point":24.55,"uvi":0,"clouds":0,"visibility":10000,"wind_speed":9.31,"wind_deg":282,"weather":[{"id":800,"main":"Clear","description":"clear
+        sky","icon":"01n"}],"pop":0},{"dt":1611201600,"temp":37.94,"feels_like":28.89,"pressure":1016,"humidity":72,"dew_point":23.4,"uvi":0,"clouds":0,"visibility":10000,"wind_speed":9.15,"wind_deg":282,"weather":[{"id":800,"main":"Clear","description":"clear
+        sky","icon":"01n"}],"pop":0},{"dt":1611205200,"temp":38.23,"feels_like":28.38,"pressure":1017,"humidity":71,"dew_point":22.93,"uvi":0,"clouds":0,"visibility":10000,"wind_speed":10.56,"wind_deg":285,"weather":[{"id":800,"main":"Clear","description":"clear
+        sky","icon":"01n"}],"pop":0},{"dt":1611208800,"temp":38.17,"feels_like":28.15,"pressure":1018,"humidity":71,"dew_point":22.6,"uvi":0,"clouds":0,"visibility":10000,"wind_speed":10.85,"wind_deg":274,"weather":[{"id":800,"main":"Clear","description":"clear
+        sky","icon":"01n"}],"pop":0},{"dt":1611212400,"temp":37.63,"feels_like":28.29,"pressure":1018,"humidity":72,"dew_point":22.39,"uvi":0,"clouds":0,"visibility":10000,"wind_speed":9.62,"wind_deg":268,"weather":[{"id":800,"main":"Clear","description":"clear
+        sky","icon":"01n"}],"pop":0},{"dt":1611216000,"temp":37.69,"feels_like":27.5,"pressure":1018,"humidity":71,"dew_point":22.05,"uvi":0,"clouds":0,"visibility":10000,"wind_speed":11.05,"wind_deg":283,"weather":[{"id":800,"main":"Clear","description":"clear
+        sky","icon":"01n"}],"pop":0},{"dt":1611219600,"temp":37.58,"feels_like":26.35,"pressure":1017,"humidity":72,"dew_point":21.87,"uvi":0,"clouds":0,"visibility":10000,"wind_speed":12.95,"wind_deg":284,"weather":[{"id":800,"main":"Clear","description":"clear
+        sky","icon":"01n"}],"pop":0},{"dt":1611223200,"temp":37.8,"feels_like":24.44,"pressure":1017,"humidity":71,"dew_point":21.78,"uvi":0,"clouds":0,"visibility":10000,"wind_speed":16.69,"wind_deg":287,"weather":[{"id":800,"main":"Clear","description":"clear
+        sky","icon":"01n"}],"pop":0},{"dt":1611226800,"temp":37.56,"feels_like":24.3,"pressure":1017,"humidity":71,"dew_point":21.63,"uvi":0,"clouds":0,"visibility":10000,"wind_speed":16.49,"wind_deg":284,"weather":[{"id":800,"main":"Clear","description":"clear
+        sky","icon":"01n"}],"pop":0},{"dt":1611230400,"temp":36.88,"feels_like":24.24,"pressure":1017,"humidity":73,"dew_point":21.54,"uvi":0,"clouds":0,"visibility":10000,"wind_speed":15.37,"wind_deg":288,"weather":[{"id":800,"main":"Clear","description":"clear
+        sky","icon":"01n"}],"pop":0},{"dt":1611234000,"temp":35.8,"feels_like":25.09,"pressure":1017,"humidity":77,"dew_point":21.49,"uvi":0,"clouds":0,"visibility":10000,"wind_speed":12.01,"wind_deg":278,"weather":[{"id":800,"main":"Clear","description":"clear
+        sky","icon":"01n"}],"pop":0},{"dt":1611237600,"temp":35.4,"feels_like":25.02,"pressure":1018,"humidity":78,"dew_point":21.24,"uvi":0,"clouds":0,"visibility":10000,"wind_speed":11.41,"wind_deg":285,"weather":[{"id":800,"main":"Clear","description":"clear
+        sky","icon":"01n"}],"pop":0},{"dt":1611241200,"temp":36.7,"feels_like":26.26,"pressure":1018,"humidity":74,"dew_point":21.16,"uvi":0.22,"clouds":0,"visibility":10000,"wind_speed":11.5,"wind_deg":293,"weather":[{"id":800,"main":"Clear","description":"clear
+        sky","icon":"01d"}],"pop":0},{"dt":1611244800,"temp":41.16,"feels_like":30.31,"pressure":1017,"humidity":62,"dew_point":21.76,"uvi":0.73,"clouds":0,"visibility":10000,"wind_speed":12.21,"wind_deg":304,"weather":[{"id":800,"main":"Clear","description":"clear
+        sky","icon":"01d"}],"pop":0},{"dt":1611248400,"temp":44.71,"feels_like":34.92,"pressure":1016,"humidity":54,"dew_point":22.01,"uvi":1.42,"clouds":0,"visibility":10000,"wind_speed":10.31,"wind_deg":317,"weather":[{"id":800,"main":"Clear","description":"clear
+        sky","icon":"01d"}],"pop":0}],"daily":[{"dt":1611082800,"sunrise":1611065519,"sunset":1611101172,"temp":{"day":32.07,"min":27.5,"max":35.24,"night":27.97,"eve":30.7,"morn":27.5},"feels_like":{"day":25.47,"night":21.63,"eve":25.45,"morn":22.35},"pressure":1032,"humidity":80,"dew_point":27.23,"wind_speed":4.12,"wind_deg":218,"weather":[{"id":601,"main":"Snow","description":"snow","icon":"13d"}],"clouds":49,"pop":0.76,"snow":2.77,"uvi":2.19},{"dt":1611169200,"sunrise":1611151889,"sunset":1611187638,"temp":{"day":48.74,"min":27.12,"max":52.02,"night":38.17,"eve":41.72,"morn":30.65},"feels_like":{"day":39.25,"night":28.15,"eve":34.11,"morn":21.94},"pressure":1015,"humidity":49,"dew_point":27.05,"wind_speed":10.11,"wind_deg":271,"weather":[{"id":800,"main":"Clear","description":"clear
+        sky","icon":"01d"}],"clouds":0,"pop":0,"uvi":2.3},{"dt":1611255600,"sunrise":1611238257,"sunset":1611274104,"temp":{"day":47.84,"min":34.27,"max":48.4,"night":34.27,"eve":40.14,"morn":35.8},"feels_like":{"day":39.99,"night":27.82,"eve":33.42,"morn":25.09},"pressure":1014,"humidity":48,"dew_point":22.15,"wind_speed":6.89,"wind_deg":79,"weather":[{"id":800,"main":"Clear","description":"clear
+        sky","icon":"01d"}],"clouds":0,"pop":0,"uvi":2.48},{"dt":1611342000,"sunrise":1611324624,"sunset":1611360571,"temp":{"day":38.03,"min":28.35,"max":42.53,"night":34.18,"eve":39.83,"morn":28.35},"feels_like":{"day":33.1,"night":29.35,"eve":33.28,"morn":22.55},"pressure":1016,"humidity":69,"dew_point":20.64,"wind_speed":1.61,"wind_deg":20,"weather":[{"id":802,"main":"Clouds","description":"scattered
+        clouds","icon":"03d"}],"clouds":31,"pop":0,"uvi":2.33},{"dt":1611428400,"sunrise":1611410988,"sunset":1611447038,"temp":{"day":49.35,"min":33.87,"max":55.99,"night":38.32,"eve":48.76,"morn":33.87},"feels_like":{"day":42.66,"night":25.48,"eve":39.96,"morn":28},"pressure":1005,"humidity":46,"dew_point":23.07,"wind_speed":4.92,"wind_deg":267,"weather":[{"id":800,"main":"Clear","description":"clear
+        sky","icon":"01d"}],"clouds":9,"pop":0,"uvi":2.37},{"dt":1611514800,"sunrise":1611497351,"sunset":1611533506,"temp":{"day":37.6,"min":30.31,"max":42.73,"night":33.6,"eve":40.14,"morn":30.31},"feels_like":{"day":31.55,"night":27.5,"eve":30.92,"morn":23.77},"pressure":1007,"humidity":75,"dew_point":26.42,"wind_speed":4,"wind_deg":125,"weather":[{"id":600,"main":"Snow","description":"light
+        snow","icon":"13d"}],"clouds":19,"pop":0.29,"snow":0.13,"uvi":3},{"dt":1611601200,"sunrise":1611583712,"sunset":1611619974,"temp":{"day":41.23,"min":28.4,"max":45.12,"night":32.31,"eve":41.47,"morn":28.4},"feels_like":{"day":33.51,"night":26.92,"eve":32.94,"morn":22.44},"pressure":1007,"humidity":55,"dew_point":12.51,"wind_speed":6.04,"wind_deg":283,"weather":[{"id":800,"main":"Clear","description":"clear
+        sky","icon":"01d"}],"clouds":0,"pop":0,"uvi":3},{"dt":1611687600,"sunrise":1611670071,"sunset":1611706442,"temp":{"day":38.35,"min":28.53,"max":40.39,"night":28.94,"eve":37.29,"morn":28.53},"feels_like":{"day":20.23,"night":19.83,"eve":26.51,"morn":21.02},"pressure":1003,"humidity":50,"dew_point":-1.68,"wind_speed":23.53,"wind_deg":278,"weather":[{"id":600,"main":"Snow","description":"light
+        snow","icon":"13d"}],"clouds":100,"pop":0.36,"snow":0.38,"uvi":3}]}'
+  recorded_at: Tue, 19 Jan 2021 18:10:33 GMT
+- request:
+    method: get
+    uri: https://api.yelp.com/v3/businesses/search?location=pueblo,co&open_at=1611086400&term=chinese
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.3.0
+      Authorization:
+      - Bearer GP7IfKbtfFLQ_HcMSRgCwLQ2J8tTKisMll2YQa4ud1tHXMZVcttQW683bGJSuIub6DgFwWRGVoCEuAmHLr8_sd7d12j9UOpH6QScA0ZgW8WPuii458NplZtx9PcFYHYx
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json
+      Ratelimit-Dailylimit:
+      - '5000'
+      Ratelimit-Remaining:
+      - '4982'
+      X-Zipkin-Id:
+      - e7e7e2472ed0963f
+      Server:
+      - envoy
+      Ratelimit-Resettime:
+      - '2021-01-20T00:00:00+00:00'
+      X-Routing-Service:
+      - routing-main--uswest2-5b584d59bc-pbzvp; site=public_api_v3
+      X-B3-Sampled:
+      - '0'
+      X-Proxied:
+      - 10-69-157-99-uswest2bprod
+      X-Extlb:
+      - 10-69-157-99-uswest2bprod
+      Cache-Control:
+      - max-age=0, must-revalidate, no-cache, no-store, private, no-transform
+      Accept-Ranges:
+      - bytes
+      Date:
+      - Tue, 19 Jan 2021 18:10:33 GMT
+      Via:
+      - 1.1 varnish
+      X-Served-By:
+      - cache-den8279-DEN
+      X-Cache:
+      - MISS
+      X-Cache-Hits:
+      - '0'
+      Vary:
+      - Accept-Encoding
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: ASCII-8BIT
+      string: '{"businesses": [{"id": "kQxM1xlaZfQmXpKaqMTNnw", "alias": "wonderful-bistro-pueblo",
+        "name": "Wonderful Bistro", "image_url": "https://s3-media1.fl.yelpcdn.com/bphoto/EIPRzs68vSrQ_2tCf5pQNw/o.jpg",
+        "is_closed": false, "url": "https://www.yelp.com/biz/wonderful-bistro-pueblo?adjust_creative=SG74TKmAPduZb5E7Qi7MtQ&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=SG74TKmAPduZb5E7Qi7MtQ",
+        "review_count": 64, "categories": [{"alias": "chinese", "title": "Chinese"}],
+        "rating": 4.0, "coordinates": {"latitude": 38.319366, "longitude": -104.616623},
+        "transactions": ["delivery"], "price": "$$", "location": {"address1": "4602
+        N Elizabeth St", "address2": "Ste 120", "address3": "", "city": "Pueblo",
+        "zip_code": "81008", "country": "US", "state": "CO", "display_address": ["4602
+        N Elizabeth St", "Ste 120", "Pueblo, CO 81008"]}, "phone": "+17195440233",
+        "display_phone": "(719) 544-0233", "distance": 6632.28027227077}, {"id": "M4MwxQAA58B7ENV8ootI-w",
+        "alias": "kans-kitchen-pueblo", "name": "Kan''s Kitchen", "image_url": "https://s3-media2.fl.yelpcdn.com/bphoto/RxBfJ3hjre51jCpXqNlfjA/o.jpg",
+        "is_closed": false, "url": "https://www.yelp.com/biz/kans-kitchen-pueblo?adjust_creative=SG74TKmAPduZb5E7Qi7MtQ&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=SG74TKmAPduZb5E7Qi7MtQ",
+        "review_count": 20, "categories": [{"alias": "chinese", "title": "Chinese"},
+        {"alias": "hotdogs", "title": "Fast Food"}], "rating": 4.5, "coordinates":
+        {"latitude": 38.2401504516602, "longitude": -104.643249511719}, "transactions":
+        ["delivery"], "price": "$", "location": {"address1": "1620 S Prairie Ave",
+        "address2": null, "address3": null, "city": "Pueblo", "zip_code": "81005",
+        "country": "US", "state": "CO", "display_address": ["1620 S Prairie Ave",
+        "Pueblo, CO 81005"]}, "phone": "+17195660209", "display_phone": "(719) 566-0209",
+        "distance": 6975.853345952662}, {"id": "TKC7xro_LZOG08-wbzeCcw", "alias":
+        "china-lantern-pueblo", "name": "China Lantern", "image_url": "https://s3-media3.fl.yelpcdn.com/bphoto/2bJv6ySHQ7M1ppeazs-i9Q/o.jpg",
+        "is_closed": false, "url": "https://www.yelp.com/biz/china-lantern-pueblo?adjust_creative=SG74TKmAPduZb5E7Qi7MtQ&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=SG74TKmAPduZb5E7Qi7MtQ",
+        "review_count": 13, "categories": [{"alias": "chinese", "title": "Chinese"}],
+        "rating": 3.5, "coordinates": {"latitude": 38.2709197998047, "longitude":
+        -104.61083984375}, "transactions": ["delivery"], "price": "$", "location":
+        {"address1": "315 W 4th St", "address2": "", "address3": "", "city": "Pueblo",
+        "zip_code": "81003", "country": "US", "state": "CO", "display_address": ["315
+        W 4th St", "Pueblo, CO 81003"]}, "phone": "+17195460640", "display_phone":
+        "(719) 546-0640", "distance": 3278.992609204916}, {"id": "TqOjqxJ1BLpyg0JOroEaLw",
+        "alias": "kuans-kitchen-pueblo", "name": "Kuan''s Kitchen", "image_url": "https://s3-media1.fl.yelpcdn.com/bphoto/YNwguQY_NKXiuuUFR8O1HA/o.jpg",
+        "is_closed": false, "url": "https://www.yelp.com/biz/kuans-kitchen-pueblo?adjust_creative=SG74TKmAPduZb5E7Qi7MtQ&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=SG74TKmAPduZb5E7Qi7MtQ",
+        "review_count": 39, "categories": [{"alias": "chinese", "title": "Chinese"},
+        {"alias": "vietnamese", "title": "Vietnamese"}, {"alias": "thai", "title":
+        "Thai"}], "rating": 3.5, "coordinates": {"latitude": 38.30896, "longitude":
+        -104.59785}, "transactions": ["delivery"], "price": "$", "location": {"address1":
+        "750 Desert Flower Blvd", "address2": "", "address3": "", "city": "Pueblo",
+        "zip_code": "81001", "country": "US", "state": "CO", "display_address": ["750
+        Desert Flower Blvd", "Pueblo, CO 81001"]}, "phone": "+17195830888", "display_phone":
+        "(719) 583-0888", "distance": 4814.277659769904}, {"id": "P1nNU18FWCEmkR0CfHSF7Q",
+        "alias": "black-swan-cafe-pueblo", "name": "Black Swan Cafe", "image_url":
+        "https://s3-media3.fl.yelpcdn.com/bphoto/3_0MBKLUL76zltPUwntKIg/o.jpg", "is_closed":
+        false, "url": "https://www.yelp.com/biz/black-swan-cafe-pueblo?adjust_creative=SG74TKmAPduZb5E7Qi7MtQ&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=SG74TKmAPduZb5E7Qi7MtQ",
+        "review_count": 11, "categories": [{"alias": "cafes", "title": "Cafes"}, {"alias":
+        "chinese", "title": "Chinese"}, {"alias": "chickenshop", "title": "Chicken
+        Shop"}], "rating": 3.5, "coordinates": {"latitude": 38.27369, "longitude":
+        -104.60915}, "transactions": ["delivery"], "price": "$", "location": {"address1":
+        "209 W 7th St", "address2": "", "address3": "", "city": "Pueblo", "zip_code":
+        "81003", "country": "US", "state": "CO", "display_address": ["209 W 7th St",
+        "Pueblo, CO 81003"]}, "phone": "+17195420858", "display_phone": "(719) 542-0858",
+        "distance": 3146.182318772612}, {"id": "DlmURaG5lqJATaNUhFE6Yg", "alias":
+        "tea-palace-ii-pueblo", "name": "Tea Palace II", "image_url": "https://s3-media2.fl.yelpcdn.com/bphoto/EUHzPXAwoLTFdmCk2UC_jA/o.jpg",
+        "is_closed": false, "url": "https://www.yelp.com/biz/tea-palace-ii-pueblo?adjust_creative=SG74TKmAPduZb5E7Qi7MtQ&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=SG74TKmAPduZb5E7Qi7MtQ",
+        "review_count": 17, "categories": [{"alias": "chinese", "title": "Chinese"}],
+        "rating": 3.5, "coordinates": {"latitude": 38.267707824707, "longitude": -104.62508392334},
+        "transactions": ["pickup", "delivery"], "price": "$", "location": {"address1":
+        "1212 W 4th St", "address2": "", "address3": "", "city": "Pueblo", "zip_code":
+        "81004", "country": "US", "state": "CO", "display_address": ["1212 W 4th St",
+        "Pueblo, CO 81004"]}, "phone": "+17195460099", "display_phone": "(719) 546-0099",
+        "distance": 4530.795212432949}, {"id": "z390zs1RzDY872MmMNd_VA", "alias":
+        "tian-jin-oriental-cuisine-pueblo-2", "name": "Tian Jin Oriental Cuisine",
+        "image_url": "https://s3-media1.fl.yelpcdn.com/bphoto/R7CNAo2zIGyLOZsDV-p2xQ/o.jpg",
+        "is_closed": false, "url": "https://www.yelp.com/biz/tian-jin-oriental-cuisine-pueblo-2?adjust_creative=SG74TKmAPduZb5E7Qi7MtQ&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=SG74TKmAPduZb5E7Qi7MtQ",
+        "review_count": 18, "categories": [{"alias": "chinese", "title": "Chinese"}],
+        "rating": 3.0, "coordinates": {"latitude": 38.243054, "longitude": -104.649384},
+        "transactions": ["delivery"], "price": "$", "location": {"address1": "3400
+        W Northern Ave", "address2": "", "address3": "", "city": "Pueblo", "zip_code":
+        "81005", "country": "US", "state": "CO", "display_address": ["3400 W Northern
+        Ave", "Pueblo, CO 81005"]}, "phone": "+17195600903", "display_phone": "(719)
+        560-0903", "distance": 7298.796438361594}, {"id": "xYK1XFa4glGAaqvPQ4KW3g",
+        "alias": "tea-palace-pueblo", "name": "Tea Palace", "image_url": "https://s3-media4.fl.yelpcdn.com/bphoto/YGmXfULhAMeF2ghb8_R7Vw/o.jpg",
+        "is_closed": false, "url": "https://www.yelp.com/biz/tea-palace-pueblo?adjust_creative=SG74TKmAPduZb5E7Qi7MtQ&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=SG74TKmAPduZb5E7Qi7MtQ",
+        "review_count": 28, "categories": [{"alias": "chinese", "title": "Chinese"}],
+        "rating": 4.0, "coordinates": {"latitude": 38.3342042993682, "longitude":
+        -104.742797694933}, "transactions": ["delivery"], "price": "$$", "location":
+        {"address1": "46 S Dunlap Dr", "address2": "", "address3": "", "city": "Pueblo",
+        "zip_code": "81007", "country": "US", "state": "CO", "display_address": ["46
+        S Dunlap Dr", "Pueblo, CO 81007"]}, "phone": "+17195478288", "display_phone":
+        "(719) 547-8288", "distance": 16401.249101815272}, {"id": "acigkKsX8qvfsWnybPe06Q",
+        "alias": "canton-house-pueblo", "name": "Canton House", "image_url": "https://s3-media1.fl.yelpcdn.com/bphoto/P_6n5QVvmjogq8L9sCi5iw/o.jpg",
+        "is_closed": false, "url": "https://www.yelp.com/biz/canton-house-pueblo?adjust_creative=SG74TKmAPduZb5E7Qi7MtQ&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=SG74TKmAPduZb5E7Qi7MtQ",
+        "review_count": 11, "categories": [{"alias": "cantonese", "title": "Cantonese"}],
+        "rating": 3.0, "coordinates": {"latitude": 38.310926, "longitude": -104.628937},
+        "transactions": ["delivery"], "price": "$$", "location": {"address1": "1617
+        W US Hwy 50", "address2": "", "address3": "", "city": "Pueblo", "zip_code":
+        "81008", "country": "US", "state": "CO", "display_address": ["1617 W US Hwy
+        50", "Pueblo, CO 81008"]}, "phone": "+17195454141", "display_phone": "(719)
+        545-4141", "distance": 6624.026295255045}, {"id": "AvI8d7y-xBUAUowQsVrg0g",
+        "alias": "asian-tropix-fusion-pueblo-west", "name": "Asian Tropix Fusion",
+        "image_url": "https://s3-media2.fl.yelpcdn.com/bphoto/K74PX3E3KtKZSOnaYOGcvQ/o.jpg",
+        "is_closed": false, "url": "https://www.yelp.com/biz/asian-tropix-fusion-pueblo-west?adjust_creative=SG74TKmAPduZb5E7Qi7MtQ&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=SG74TKmAPduZb5E7Qi7MtQ",
+        "review_count": 27, "categories": [{"alias": "hawaiian", "title": "Hawaiian"},
+        {"alias": "asianfusion", "title": "Asian Fusion"}, {"alias": "bbq", "title":
+        "Barbeque"}], "rating": 4.5, "coordinates": {"latitude": 38.3208058831895,
+        "longitude": -104.703300995953}, "transactions": ["pickup", "delivery"], "location":
+        {"address1": "198 S Purcell Blvd", "address2": "", "address3": null, "city":
+        "Pueblo West", "zip_code": "81007", "country": "US", "state": "CO", "display_address":
+        ["198 S Purcell Blvd", "Pueblo West, CO 81007"]}, "phone": "+17192813795",
+        "display_phone": "(719) 281-3795", "distance": 12651.302104983844}, {"id":
+        "9e4cxC_yf-fDou7BsW1MyQ", "alias": "pueblo-dragon-2-pueblo", "name": "Pueblo
+        Dragon 2", "image_url": "https://s3-media1.fl.yelpcdn.com/bphoto/hjd0WuwWJrbdvFea1Dzg7g/o.jpg",
+        "is_closed": false, "url": "https://www.yelp.com/biz/pueblo-dragon-2-pueblo?adjust_creative=SG74TKmAPduZb5E7Qi7MtQ&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=SG74TKmAPduZb5E7Qi7MtQ",
+        "review_count": 9, "categories": [{"alias": "chinese", "title": "Chinese"}],
+        "rating": 2.5, "coordinates": {"latitude": 38.24486, "longitude": -104.5646},
+        "transactions": ["pickup", "delivery"], "location": {"address1": "2648 Santa
+        Fe Dr", "address2": "Ste 9", "address3": null, "city": "Pueblo", "zip_code":
+        "81006", "country": "US", "state": "CO", "display_address": ["2648 Santa Fe
+        Dr", "Ste 9", "Pueblo, CO 81006"]}, "phone": "+17195443008", "display_phone":
+        "(719) 544-3008", "distance": 2916.844165497838}, {"id": "B1K7Kq9ivlZx4ZF2V5QxPw",
+        "alias": "mongolian-grill-pueblo", "name": "Mongolian Grill ", "image_url":
+        "https://s3-media1.fl.yelpcdn.com/bphoto/TqTonRxXyRAnejlNoikQ1w/o.jpg", "is_closed":
+        false, "url": "https://www.yelp.com/biz/mongolian-grill-pueblo?adjust_creative=SG74TKmAPduZb5E7Qi7MtQ&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=SG74TKmAPduZb5E7Qi7MtQ",
+        "review_count": 18, "categories": [{"alias": "asianfusion", "title": "Asian
+        Fusion"}], "rating": 3.0, "coordinates": {"latitude": 38.2980418, "longitude":
+        -104.6076509}, "transactions": ["pickup", "delivery"], "price": "$$", "location":
+        {"address1": "164 W 29th St", "address2": null, "address3": null, "city":
+        "Pueblo", "zip_code": "81008", "country": "US", "state": "CO", "display_address":
+        ["164 W 29th St", "Pueblo, CO 81008"]}, "phone": "+17195434526", "display_phone":
+        "(719) 543-4526", "distance": 4273.643929950528}, {"id": "wKb2ITmSRYN6I7Py14YPUA",
+        "alias": "panda-express-pueblo", "name": "Panda Express", "image_url": "https://s3-media2.fl.yelpcdn.com/bphoto/flMZtkgOQwQtW5R4Iimg6w/o.jpg",
+        "is_closed": false, "url": "https://www.yelp.com/biz/panda-express-pueblo?adjust_creative=SG74TKmAPduZb5E7Qi7MtQ&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=SG74TKmAPduZb5E7Qi7MtQ",
+        "review_count": 23, "categories": [{"alias": "chinese", "title": "Chinese"},
+        {"alias": "hotdogs", "title": "Fast Food"}], "rating": 2.0, "coordinates":
+        {"latitude": 38.2325574, "longitude": -104.6628568}, "transactions": ["pickup",
+        "delivery"], "price": "$$", "location": {"address1": "2001 S Pueblo Blvd",
+        "address2": "", "address3": "", "city": "Pueblo", "zip_code": "81005", "country":
+        "US", "state": "CO", "display_address": ["2001 S Pueblo Blvd", "Pueblo, CO
+        81005"]}, "phone": "+17195649000", "display_phone": "(719) 564-9000", "distance":
+        8872.987172857325}, {"id": "3MONRi6Bh5gO1s_4nCaMYQ", "alias": "noodles-and-company-pueblo",
+        "name": "Noodles & Company", "image_url": "https://s3-media2.fl.yelpcdn.com/bphoto/BX4n89hTu90OSoEDWF_mxA/o.jpg",
+        "is_closed": false, "url": "https://www.yelp.com/biz/noodles-and-company-pueblo?adjust_creative=SG74TKmAPduZb5E7Qi7MtQ&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=SG74TKmAPduZb5E7Qi7MtQ",
+        "review_count": 33, "categories": [{"alias": "noodles", "title": "Noodles"},
+        {"alias": "salad", "title": "Salad"}, {"alias": "pastashops", "title": "Pasta
+        Shops"}], "rating": 3.5, "coordinates": {"latitude": 38.3085380973858, "longitude":
+        -104.61941242218}, "transactions": [], "price": "$", "location": {"address1":
+        "825 W US Hwy 50", "address2": "", "address3": "", "city": "Pueblo", "zip_code":
+        "81008", "country": "US", "state": "CO", "display_address": ["825 W US Hwy
+        50", "Pueblo, CO 81008"]}, "phone": "+17195441539", "display_phone": "(719)
+        544-1539", "distance": 5846.41953186027}], "total": 14, "region": {"center":
+        {"longitude": -104.5733642578125, "latitude": 38.27035217485165}}}'
+  recorded_at: Tue, 19 Jan 2021 18:10:33 GMT
+- request:
+    method: get
+    uri: https://api.yelp.com/v3/businesses/search?location=pueblo,co&open_at=1611086400&term
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.3.0
+      Authorization:
+      - Bearer GP7IfKbtfFLQ_HcMSRgCwLQ2J8tTKisMll2YQa4ud1tHXMZVcttQW683bGJSuIub6DgFwWRGVoCEuAmHLr8_sd7d12j9UOpH6QScA0ZgW8WPuii458NplZtx9PcFYHYx
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json
+      Ratelimit-Dailylimit:
+      - '5000'
+      Ratelimit-Remaining:
+      - '4977'
+      X-Zipkin-Id:
+      - fed5a83894728934
+      Server:
+      - envoy
+      Ratelimit-Resettime:
+      - '2021-01-20T00:00:00+00:00'
+      X-Routing-Service:
+      - routing-main--uswest2-5b584d59bc-st9bg; site=public_api_v3
+      X-B3-Sampled:
+      - '0'
+      X-Proxied:
+      - 10-69-150-247-uswest2bprod
+      X-Extlb:
+      - 10-69-150-247-uswest2bprod
+      Cache-Control:
+      - max-age=0, must-revalidate, no-cache, no-store, private, no-transform
+      Accept-Ranges:
+      - bytes
+      Date:
+      - Tue, 19 Jan 2021 18:17:50 GMT
+      Via:
+      - 1.1 varnish
+      X-Served-By:
+      - cache-den8250-DEN
+      X-Cache:
+      - MISS
+      X-Cache-Hits:
+      - '0'
+      Vary:
+      - Accept-Encoding
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: ASCII-8BIT
+      string: '{"businesses": [{"id": "8wGSggWsopmqoCyd9bY-dw", "alias": "bingo-burger-pueblo-4",
+        "name": "Bingo Burger", "image_url": "https://s3-media3.fl.yelpcdn.com/bphoto/KyMKYZ2W8nyjocqzkrrEog/o.jpg",
+        "is_closed": false, "url": "https://www.yelp.com/biz/bingo-burger-pueblo-4?adjust_creative=SG74TKmAPduZb5E7Qi7MtQ&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=SG74TKmAPduZb5E7Qi7MtQ",
+        "review_count": 396, "categories": [{"alias": "burgers", "title": "Burgers"}],
+        "rating": 4.0, "coordinates": {"latitude": 38.268043, "longitude": -104.609794},
+        "transactions": ["pickup", "delivery"], "price": "$$", "location": {"address1":
+        "101 Central Plz", "address2": "", "address3": "", "city": "Pueblo", "zip_code":
+        "81003", "country": "US", "state": "CO", "display_address": ["101 Central
+        Plz", "Pueblo, CO 81003"]}, "phone": "+17192258363", "display_phone": "(719)
+        225-8363", "distance": 3190.6682549996963}, {"id": "S_sW4cZsXUC60GUrtIHe3A",
+        "alias": "shamrock-brewing-pueblo", "name": "Shamrock Brewing", "image_url":
+        "https://s3-media2.fl.yelpcdn.com/bphoto/ZwZFj0uUcYJATEUaC0E5Bg/o.jpg", "is_closed":
+        false, "url": "https://www.yelp.com/biz/shamrock-brewing-pueblo?adjust_creative=SG74TKmAPduZb5E7Qi7MtQ&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=SG74TKmAPduZb5E7Qi7MtQ",
+        "review_count": 345, "categories": [{"alias": "irish", "title": "Irish"},
+        {"alias": "irish_pubs", "title": "Irish Pub"}, {"alias": "brewpubs", "title":
+        "Brewpubs"}], "rating": 4.0, "coordinates": {"latitude": 38.2695003, "longitude":
+        -104.6077592}, "transactions": ["delivery"], "price": "$$", "location": {"address1":
+        "108 W 3rd St", "address2": "", "address3": "", "city": "Pueblo", "zip_code":
+        "81003", "country": "US", "state": "CO", "display_address": ["108 W 3rd St",
+        "Pueblo, CO 81003"]}, "phone": "+17195429974", "display_phone": "(719) 542-9974",
+        "distance": 3004.145195380956}, {"id": "TJTZuf8hdm2SpqrCKV5n9A", "alias":
+        "brues-alehouse-pueblo-3", "name": "Brues Alehouse", "image_url": "https://s3-media3.fl.yelpcdn.com/bphoto/Dd1cNms4g4u5g9d5FPmKdw/o.jpg",
+        "is_closed": false, "url": "https://www.yelp.com/biz/brues-alehouse-pueblo-3?adjust_creative=SG74TKmAPduZb5E7Qi7MtQ&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=SG74TKmAPduZb5E7Qi7MtQ",
+        "review_count": 391, "categories": [{"alias": "breweries", "title": "Breweries"},
+        {"alias": "tradamerican", "title": "American (Traditional)"}], "rating": 4.0,
+        "coordinates": {"latitude": 38.2654120794923, "longitude": -104.609714939094},
+        "transactions": ["delivery"], "price": "$$", "location": {"address1": "120
+        Riverwalk Pl", "address2": "", "address3": "", "city": "Pueblo", "zip_code":
+        "81003", "country": "US", "state": "CO", "display_address": ["120 Riverwalk
+        Pl", "Pueblo, CO 81003"]}, "phone": "+17199249670", "display_phone": "(719)
+        924-9670", "distance": 3220.6660506639014}, {"id": "hzVSW5zEzkLNPvCY5QjYag",
+        "alias": "tacos-navarro-pueblo", "name": "Tacos Navarro", "image_url": "https://s3-media2.fl.yelpcdn.com/bphoto/wc6GBBKPo4_3vKgObAuSLA/o.jpg",
+        "is_closed": false, "url": "https://www.yelp.com/biz/tacos-navarro-pueblo?adjust_creative=SG74TKmAPduZb5E7Qi7MtQ&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=SG74TKmAPduZb5E7Qi7MtQ",
+        "review_count": 116, "categories": [{"alias": "mexican", "title": "Mexican"}],
+        "rating": 4.5, "coordinates": {"latitude": 38.244251452554, "longitude": -104.609048031271},
+        "transactions": ["pickup", "delivery"], "price": "$", "location": {"address1":
+        "223 E Northern Ave", "address2": null, "address3": null, "city": "Pueblo",
+        "zip_code": "81006", "country": "US", "state": "CO", "display_address": ["223
+        E Northern Ave", "Pueblo, CO 81006"]}, "phone": "+17195466280", "display_phone":
+        "(719) 546-6280", "distance": 4258.024047789065}, {"id": "YG7ozi2bkM8OJDTpyFc4AA",
+        "alias": "roccos-riverside-deli-pueblo", "name": "Rocco''s Riverside Deli",
+        "image_url": "https://s3-media1.fl.yelpcdn.com/bphoto/AXw9VBN4t9iReMgrZMz15Q/o.jpg",
+        "is_closed": false, "url": "https://www.yelp.com/biz/roccos-riverside-deli-pueblo?adjust_creative=SG74TKmAPduZb5E7Qi7MtQ&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=SG74TKmAPduZb5E7Qi7MtQ",
+        "review_count": 83, "categories": [{"alias": "hotdogs", "title": "Fast Food"},
+        {"alias": "delis", "title": "Delis"}, {"alias": "sandwiches", "title": "Sandwiches"}],
+        "rating": 4.5, "coordinates": {"latitude": 38.26716, "longitude": -104.62572},
+        "transactions": ["delivery"], "price": "$", "location": {"address1": "1300
+        W 4th St", "address2": null, "address3": "", "city": "Pueblo", "zip_code":
+        "81004", "country": "US", "state": "CO", "display_address": ["1300 W 4th St",
+        "Pueblo, CO 81004"]}, "phone": "+17195821616", "display_phone": "(719) 582-1616",
+        "distance": 4604.574586661841}, {"id": "zFMpK8uAIVP0dtEHh0x-pg", "alias":
+        "solar-roast-coffee-pueblo", "name": "Solar Roast Coffee", "image_url": "https://s3-media4.fl.yelpcdn.com/bphoto/xAIJorfhZdXK54tyUUPSXA/o.jpg",
+        "is_closed": false, "url": "https://www.yelp.com/biz/solar-roast-coffee-pueblo?adjust_creative=SG74TKmAPduZb5E7Qi7MtQ&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=SG74TKmAPduZb5E7Qi7MtQ",
+        "review_count": 104, "categories": [{"alias": "coffee", "title": "Coffee &
+        Tea"}], "rating": 4.5, "coordinates": {"latitude": 38.2690841, "longitude":
+        -104.6083682}, "transactions": ["pickup", "delivery"], "price": "$", "location":
+        {"address1": "226 N Main St", "address2": "", "address3": "", "city": "Pueblo",
+        "zip_code": "81003", "country": "US", "state": "CO", "display_address": ["226
+        N Main St", "Pueblo, CO 81003"]}, "phone": "+17195442008", "display_phone":
+        "(719) 544-2008", "distance": 3057.420996190262}, {"id": "qa-JLTeHxi0GJxDr1-0xPw",
+        "alias": "mill-stop-cafe-pueblo", "name": "Mill Stop Cafe", "image_url": "https://s3-media3.fl.yelpcdn.com/bphoto/AIyRn0PW7KPTbq-y0-3b-w/o.jpg",
+        "is_closed": false, "url": "https://www.yelp.com/biz/mill-stop-cafe-pueblo?adjust_creative=SG74TKmAPduZb5E7Qi7MtQ&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=SG74TKmAPduZb5E7Qi7MtQ",
+        "review_count": 115, "categories": [{"alias": "mexican", "title": "Mexican"}],
+        "rating": 4.5, "coordinates": {"latitude": 38.2390823364258, "longitude":
+        -104.614639282227}, "transactions": ["delivery"], "price": "$", "location":
+        {"address1": "317 Bay State Ave", "address2": "", "address3": "", "city":
+        "Pueblo", "zip_code": "81004", "country": "US", "state": "CO", "display_address":
+        ["317 Bay State Ave", "Pueblo, CO 81004"]}, "phone": "+17195640407", "display_phone":
+        "(719) 564-0407", "distance": 5011.493863805519}, {"id": "bsSaMbB8acH6fUNkU-berQ",
+        "alias": "grind-ha\u00fcs-cafe-pueblo", "name": "Grind Ha\u00fcs Cafe", "image_url":
+        "https://s3-media2.fl.yelpcdn.com/bphoto/niwsRSm-5Ndr8h3Pay2slg/o.jpg", "is_closed":
+        false, "url": "https://www.yelp.com/biz/grind-ha%C3%BCs-cafe-pueblo?adjust_creative=SG74TKmAPduZb5E7Qi7MtQ&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=SG74TKmAPduZb5E7Qi7MtQ",
+        "review_count": 205, "categories": [{"alias": "coffee", "title": "Coffee &
+        Tea"}, {"alias": "sandwiches", "title": "Sandwiches"}, {"alias": "breakfast_brunch",
+        "title": "Breakfast & Brunch"}], "rating": 4.0, "coordinates": {"latitude":
+        38.2640899, "longitude": -104.6141053}, "transactions": ["pickup", "delivery"],
+        "price": "$", "location": {"address1": "209 S Union Ave", "address2": "",
+        "address3": "", "city": "Pueblo", "zip_code": "81003", "country": "US", "state":
+        "CO", "display_address": ["209 S Union Ave", "Pueblo, CO 81003"]}, "phone":
+        "+17195618567", "display_phone": "(719) 561-8567", "distance": 3624.314902240056},
+        {"id": "DxHTOXGO_MQHpS1eo9VjGQ", "alias": "schleps-sandwiches-pueblo", "name":
+        "Schlep''s Sandwiches", "image_url": "https://s3-media2.fl.yelpcdn.com/bphoto/ybvGGPWFy8ClNWXCtOTdwQ/o.jpg",
+        "is_closed": false, "url": "https://www.yelp.com/biz/schleps-sandwiches-pueblo?adjust_creative=SG74TKmAPduZb5E7Qi7MtQ&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=SG74TKmAPduZb5E7Qi7MtQ",
+        "review_count": 72, "categories": [{"alias": "sandwiches", "title": "Sandwiches"}],
+        "rating": 4.5, "coordinates": {"latitude": 38.272921, "longitude": -104.608494},
+        "transactions": ["delivery"], "price": "$", "location": {"address1": "612
+        N Main St", "address2": "", "address3": "", "city": "Pueblo", "zip_code":
+        "81003", "country": "US", "state": "CO", "display_address": ["612 N Main St",
+        "Pueblo, CO 81003"]}, "phone": "+17199249255", "display_phone": "(719) 924-9255",
+        "distance": 3080.0004498540775}, {"id": "vZKjFyRgxXbzVVacQscjDg", "alias":
+        "gaglianos-italian-market-pueblo", "name": "Gagliano''s Italian Market", "image_url":
+        "https://s3-media2.fl.yelpcdn.com/bphoto/DtRMGQNKOZ-QoWwguflntw/o.jpg", "is_closed":
+        false, "url": "https://www.yelp.com/biz/gaglianos-italian-market-pueblo?adjust_creative=SG74TKmAPduZb5E7Qi7MtQ&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=SG74TKmAPduZb5E7Qi7MtQ",
+        "review_count": 45, "categories": [{"alias": "delis", "title": "Delis"}, {"alias":
+        "grocery", "title": "Grocery"}], "rating": 4.5, "coordinates": {"latitude":
+        38.2452850341797, "longitude": -104.61238861084}, "transactions": [], "price":
+        "$", "location": {"address1": "1220 Elm St", "address2": "", "address3": "",
+        "city": "Pueblo", "zip_code": "81004", "country": "US", "state": "CO", "display_address":
+        ["1220 Elm St", "Pueblo, CO 81004"]}, "phone": "+17195446058", "display_phone":
+        "(719) 544-6058", "distance": 4408.299234017396}, {"id": "HtvXdNeCJT2sJrVD3g1D7A",
+        "alias": "blue-ocean-sushi-pueblo", "name": "Blue Ocean Sushi", "image_url":
+        "https://s3-media2.fl.yelpcdn.com/bphoto/0k-Jbd_gfX6K4-9qATlidw/o.jpg", "is_closed":
+        false, "url": "https://www.yelp.com/biz/blue-ocean-sushi-pueblo?adjust_creative=SG74TKmAPduZb5E7Qi7MtQ&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=SG74TKmAPduZb5E7Qi7MtQ",
+        "review_count": 110, "categories": [{"alias": "japanese", "title": "Japanese"}],
+        "rating": 4.0, "coordinates": {"latitude": 38.2653846740723, "longitude":
+        -104.612861633301}, "transactions": ["delivery"], "price": "$$", "location":
+        {"address1": "103 S Union", "address2": "Ste 110", "address3": "", "city":
+        "Pueblo", "zip_code": "81003", "country": "US", "state": "CO", "display_address":
+        ["103 S Union", "Ste 110", "Pueblo, CO 81003"]}, "phone": "+17196968241",
+        "display_phone": "(719) 696-8241", "distance": 3495.5453116175377}, {"id":
+        "9XInWflHsoCEdjRxc-odrw", "alias": "puukaow-thai-restaurant-pueblo", "name":
+        "Puukaow Thai Restaurant", "image_url": "https://s3-media3.fl.yelpcdn.com/bphoto/P7ZR0-RXVyBi7bLX6GrRjw/o.jpg",
+        "is_closed": false, "url": "https://www.yelp.com/biz/puukaow-thai-restaurant-pueblo?adjust_creative=SG74TKmAPduZb5E7Qi7MtQ&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=SG74TKmAPduZb5E7Qi7MtQ",
+        "review_count": 91, "categories": [{"alias": "thai", "title": "Thai"}], "rating":
+        4.5, "coordinates": {"latitude": 38.324995, "longitude": -104.69731}, "transactions":
+        ["delivery"], "price": "$$", "location": {"address1": "1021 N Market Plz",
+        "address2": null, "address3": null, "city": "Pueblo", "zip_code": "81007",
+        "country": "US", "state": "CO", "display_address": ["1021 N Market Plz", "Pueblo,
+        CO 81007"]}, "phone": "+17195478777", "display_phone": "(719) 547-8777", "distance":
+        12405.988900012979}, {"id": "Uqf8d6ffrKfiovJzKH7LKA", "alias": "squawk-coffee-pueblo",
+        "name": "Squawk Coffee", "image_url": "https://s3-media3.fl.yelpcdn.com/bphoto/AFAiXZSm9OOUAV4Okm2v2Q/o.jpg",
+        "is_closed": false, "url": "https://www.yelp.com/biz/squawk-coffee-pueblo?adjust_creative=SG74TKmAPduZb5E7Qi7MtQ&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=SG74TKmAPduZb5E7Qi7MtQ",
+        "review_count": 30, "categories": [{"alias": "coffee", "title": "Coffee &
+        Tea"}, {"alias": "breakfast_brunch", "title": "Breakfast & Brunch"}, {"alias":
+        "juicebars", "title": "Juice Bars & Smoothies"}], "rating": 5.0, "coordinates":
+        {"latitude": 38.2717699, "longitude": -104.6138}, "transactions": [], "price":
+        "$", "location": {"address1": "517 W 5th St", "address2": "Ste 101", "address3":
+        "", "city": "Pueblo", "zip_code": "81003", "country": "US", "state": "CO",
+        "display_address": ["517 W 5th St", "Ste 101", "Pueblo, CO 81003"]}, "phone":
+        "+17192813754", "display_phone": "(719) 281-3754", "distance": 3552.145188960284},
+        {"id": "0Kzu5Sv1_liiiHpbFc6FlQ", "alias": "the-hangar-pueblo", "name": "The
+        Hangar", "image_url": "https://s3-media4.fl.yelpcdn.com/bphoto/x04Ooefr88PuB1vlCIVp9g/o.jpg",
+        "is_closed": false, "url": "https://www.yelp.com/biz/the-hangar-pueblo?adjust_creative=SG74TKmAPduZb5E7Qi7MtQ&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=SG74TKmAPduZb5E7Qi7MtQ",
+        "review_count": 80, "categories": [{"alias": "tradamerican", "title": "American
+        (Traditional)"}, {"alias": "steak", "title": "Steakhouses"}, {"alias": "bars",
+        "title": "Bars"}], "rating": 4.0, "coordinates": {"latitude": 38.28971, "longitude":
+        -104.60787}, "transactions": ["delivery"], "price": "$$", "location": {"address1":
+        "100 W 23rd St", "address2": "", "address3": "", "city": "Pueblo", "zip_code":
+        "81003", "country": "US", "state": "CO", "display_address": ["100 W 23rd St",
+        "Pueblo, CO 81003"]}, "phone": "+17195448208", "display_phone": "(719) 544-8208",
+        "distance": 3692.2844895662997}, {"id": "yLFY5HQ2NH3E8r5ZveTcYw", "alias":
+        "shahs-kabob-and-gyro-pueblo-2", "name": "Shah''s Kabob & Gyro", "image_url":
+        "https://s3-media4.fl.yelpcdn.com/bphoto/g0JR2Oejl6-rOzjnBEDa8w/o.jpg", "is_closed":
+        false, "url": "https://www.yelp.com/biz/shahs-kabob-and-gyro-pueblo-2?adjust_creative=SG74TKmAPduZb5E7Qi7MtQ&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=SG74TKmAPduZb5E7Qi7MtQ",
+        "review_count": 52, "categories": [{"alias": "mediterranean", "title": "Mediterranean"},
+        {"alias": "greek", "title": "Greek"}, {"alias": "comfortfood", "title": "Comfort
+        Food"}], "rating": 4.5, "coordinates": {"latitude": 38.3199331, "longitude":
+        -104.621323}, "transactions": ["pickup", "delivery"], "price": "$$", "location":
+        {"address1": "940 Eagleridge Blvd", "address2": null, "address3": "", "city":
+        "Pueblo", "zip_code": "81008", "country": "US", "state": "CO", "display_address":
+        ["940 Eagleridge Blvd", "Pueblo, CO 81008"]}, "phone": "+17197661088", "display_phone":
+        "(719) 766-1088", "distance": 6921.81429226954}, {"id": "3JjKgJOKleRM_iqg2_XVGQ",
+        "alias": "grays-coors-tavern-pueblo", "name": "Gray''s Coors Tavern", "image_url":
+        "https://s3-media1.fl.yelpcdn.com/bphoto/uUGRrmberdBEXAnO0T49Hg/o.jpg", "is_closed":
+        false, "url": "https://www.yelp.com/biz/grays-coors-tavern-pueblo?adjust_creative=SG74TKmAPduZb5E7Qi7MtQ&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=SG74TKmAPduZb5E7Qi7MtQ",
+        "review_count": 125, "categories": [{"alias": "bars", "title": "Bars"}, {"alias":
+        "tradamerican", "title": "American (Traditional)"}], "rating": 3.5, "coordinates":
+        {"latitude": 38.2708740234375, "longitude": -104.613922119141}, "transactions":
+        ["delivery"], "price": "$", "location": {"address1": "515 W 4th St", "address2":
+        "", "address3": "", "city": "Pueblo", "zip_code": "81003", "country": "US",
+        "state": "CO", "display_address": ["515 W 4th St", "Pueblo, CO 81003"]}, "phone":
+        "+17195440455", "display_phone": "(719) 544-0455", "distance": 3539.8510980550477},
+        {"id": "Vt0ThK_gcJKX2kdF7zmtRA", "alias": "love-mug-coffee-shop-pueblo", "name":
+        "Love Mug Coffee Shop", "image_url": "https://s3-media1.fl.yelpcdn.com/bphoto/jxwdOEYfCeDn8g6_VvdGUA/o.jpg",
+        "is_closed": false, "url": "https://www.yelp.com/biz/love-mug-coffee-shop-pueblo?adjust_creative=SG74TKmAPduZb5E7Qi7MtQ&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=SG74TKmAPduZb5E7Qi7MtQ",
+        "review_count": 38, "categories": [{"alias": "coffee", "title": "Coffee &
+        Tea"}, {"alias": "sandwiches", "title": "Sandwiches"}, {"alias": "breakfast_brunch",
+        "title": "Breakfast & Brunch"}], "rating": 4.5, "coordinates": {"latitude":
+        38.3091842332656, "longitude": -104.622146598995}, "transactions": ["pickup",
+        "delivery"], "price": "$", "location": {"address1": "975 US-50", "address2":
+        "", "address3": null, "city": "Pueblo", "zip_code": "81008", "country": "US",
+        "state": "CO", "display_address": ["975 US-50", "Pueblo, CO 81008"]}, "phone":
+        "+17196961175", "display_phone": "(719) 696-1175", "distance": 6063.887602262677},
+        {"id": "cfKkli_2l94xrxhqvBqhPw", "alias": "tortilleria-delicias-pueblo", "name":
+        "Tortilleria Delicias", "image_url": "https://s3-media4.fl.yelpcdn.com/bphoto/0FDhFTFlSLcfzHIQaPifnQ/o.jpg",
+        "is_closed": false, "url": "https://www.yelp.com/biz/tortilleria-delicias-pueblo?adjust_creative=SG74TKmAPduZb5E7Qi7MtQ&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=SG74TKmAPduZb5E7Qi7MtQ",
+        "review_count": 24, "categories": [{"alias": "mexican", "title": "Mexican"}],
+        "rating": 5.0, "coordinates": {"latitude": 38.250474, "longitude": -104.6065836},
+        "transactions": ["delivery"], "price": "$$", "location": {"address1": "926
+        S Santa Fe Ave", "address2": "", "address3": "", "city": "Pueblo", "zip_code":
+        "81006", "country": "US", "state": "CO", "display_address": ["926 S Santa
+        Fe Ave", "Pueblo, CO 81006"]}, "phone": "+17192968499", "display_phone": "(719)
+        296-8499", "distance": 3646.6394552565494}, {"id": "47uwM2nD7016OGuq7Nejgw",
+        "alias": "east-coast-pizza-pueblo", "name": "East Coast Pizza", "image_url":
+        "https://s3-media1.fl.yelpcdn.com/bphoto/09W3bfjwQbCOjfs9iprcng/o.jpg", "is_closed":
+        false, "url": "https://www.yelp.com/biz/east-coast-pizza-pueblo?adjust_creative=SG74TKmAPduZb5E7Qi7MtQ&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=SG74TKmAPduZb5E7Qi7MtQ",
+        "review_count": 94, "categories": [{"alias": "pizza", "title": "Pizza"}],
+        "rating": 4.0, "coordinates": {"latitude": 38.3089282671407, "longitude":
+        -104.628635571119}, "transactions": ["pickup", "delivery"], "price": "$$",
+        "location": {"address1": "1638 W US Hwy 50", "address2": "", "address3": "",
+        "city": "Pueblo", "zip_code": "81008", "country": "US", "state": "CO", "display_address":
+        ["1638 W US Hwy 50", "Pueblo, CO 81008"]}, "phone": "+17195839000", "display_phone":
+        "(719) 583-9000", "distance": 6455.139817797433}, {"id": "3Edd-08gz7auXvqqM-4Dwg",
+        "alias": "vazquez-taco-shop-pueblo", "name": "Vazquez Taco Shop", "image_url":
+        "https://s3-media2.fl.yelpcdn.com/bphoto/lyudLzs92SPt-UFVDqd1rA/o.jpg", "is_closed":
+        false, "url": "https://www.yelp.com/biz/vazquez-taco-shop-pueblo?adjust_creative=SG74TKmAPduZb5E7Qi7MtQ&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=SG74TKmAPduZb5E7Qi7MtQ",
+        "review_count": 33, "categories": [{"alias": "mexican", "title": "Mexican"}],
+        "rating": 4.5, "coordinates": {"latitude": 38.2707358, "longitude": -104.599503},
+        "transactions": ["delivery"], "price": "$", "location": {"address1": "604
+        E 4th St", "address2": null, "address3": null, "city": "Pueblo", "zip_code":
+        "81001", "country": "US", "state": "CO", "display_address": ["604 E 4th St",
+        "Pueblo, CO 81001"]}, "phone": "+17195462186", "display_phone": "(719) 546-2186",
+        "distance": 2284.522971886835}], "total": 197, "region": {"center": {"longitude":
+        -104.5733642578125, "latitude": 38.27035217485165}}}'
+  recorded_at: Tue, 19 Jan 2021 18:17:50 GMT
+recorded_with: VCR 6.0.0

@@ -1,0 +1,158 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.yelp.com/v3/businesses/search?categories=chinese&location=denver,co&open_at=1611075600
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.3.0
+      Authorization:
+      - Bearer GP7IfKbtfFLQ_HcMSRgCwLQ2J8tTKisMll2YQa4ud1tHXMZVcttQW683bGJSuIub6DgFwWRGVoCEuAmHLr8_sd7d12j9UOpH6QScA0ZgW8WPuii458NplZtx9PcFYHYx
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json
+      Ratelimit-Dailylimit:
+      - '5000'
+      Ratelimit-Remaining:
+      - '4988'
+      X-Zipkin-Id:
+      - b2f0feebad268672
+      Server:
+      - envoy
+      Ratelimit-Resettime:
+      - '2021-01-20T00:00:00+00:00'
+      X-Routing-Service:
+      - routing-main--uswest2-5b584d59bc-st9bg; site=public_api_v3
+      X-B3-Sampled:
+      - '0'
+      X-Proxied:
+      - 10-69-90-30-uswest2aprod
+      X-Extlb:
+      - 10-69-90-30-uswest2aprod
+      Cache-Control:
+      - max-age=0, must-revalidate, no-cache, no-store, private, no-transform
+      Accept-Ranges:
+      - bytes
+      Date:
+      - Tue, 19 Jan 2021 17:35:17 GMT
+      Via:
+      - 1.1 varnish
+      X-Served-By:
+      - cache-den8274-DEN
+      X-Cache:
+      - MISS
+      X-Cache-Hits:
+      - '0'
+      Vary:
+      - Accept-Encoding
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: ASCII-8BIT
+      string: '{"businesses": [{"id": "WNuT_lfBJu_uJIG-AOvNmw", "alias": "hong-kong-barbecue-denver",
+        "name": "Hong Kong Barbecue", "image_url": "https://s3-media2.fl.yelpcdn.com/bphoto/iWUac2V0oyVj-2L2R8GC8Q/o.jpg",
+        "is_closed": false, "url": "https://www.yelp.com/biz/hong-kong-barbecue-denver?adjust_creative=SG74TKmAPduZb5E7Qi7MtQ&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=SG74TKmAPduZb5E7Qi7MtQ",
+        "review_count": 206, "categories": [{"alias": "bbq", "title": "Barbeque"},
+        {"alias": "cantonese", "title": "Cantonese"}], "rating": 4.0, "coordinates":
+        {"latitude": 39.69767, "longitude": -105.02469}, "transactions": ["delivery"],
+        "price": "$", "location": {"address1": "1048 S Federal Blvd", "address2":
+        "", "address3": "", "city": "Denver", "zip_code": "80219", "country": "US",
+        "state": "CO", "display_address": ["1048 S Federal Blvd", "Denver, CO 80219"]},
+        "phone": "+13039379088", "display_phone": "(303) 937-9088", "distance": 6271.4780053224895},
+        {"id": "DUk54oQfCdEXmMQXTb3XCQ", "alias": "super-star-asian-cuisine-denver-2",
+        "name": "Super Star Asian Cuisine", "image_url": "https://s3-media2.fl.yelpcdn.com/bphoto/ik_8sezbZllA6U69ucin9Q/o.jpg",
+        "is_closed": false, "url": "https://www.yelp.com/biz/super-star-asian-cuisine-denver-2?adjust_creative=SG74TKmAPduZb5E7Qi7MtQ&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=SG74TKmAPduZb5E7Qi7MtQ",
+        "review_count": 482, "categories": [{"alias": "dimsum", "title": "Dim Sum"},
+        {"alias": "seafood", "title": "Seafood"}, {"alias": "cantonese", "title":
+        "Cantonese"}], "rating": 3.5, "coordinates": {"latitude": 39.7101165532071,
+        "longitude": -105.013625072878}, "transactions": ["pickup", "delivery"], "price":
+        "$$", "location": {"address1": "2200 W Alameda Ave", "address2": "Ste 34",
+        "address3": "", "city": "Denver", "zip_code": "80223", "country": "US", "state":
+        "CO", "display_address": ["2200 W Alameda Ave", "Ste 34", "Denver, CO 80223"]},
+        "phone": "+13037279889", "display_phone": "(303) 727-9889", "distance": 4663.282227423548},
+        {"id": "NrB3AJjRrUvm7pzvtPNaNQ", "alias": "vinh-xuong-bakery-denver", "name":
+        "Vinh Xuong Bakery", "image_url": "https://s3-media2.fl.yelpcdn.com/bphoto/OtECPR1U7kPULFJb07bJxw/o.jpg",
+        "is_closed": false, "url": "https://www.yelp.com/biz/vinh-xuong-bakery-denver?adjust_creative=SG74TKmAPduZb5E7Qi7MtQ&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=SG74TKmAPduZb5E7Qi7MtQ",
+        "review_count": 104, "categories": [{"alias": "bakeries", "title": "Bakeries"},
+        {"alias": "vietnamese", "title": "Vietnamese"}, {"alias": "chinese", "title":
+        "Chinese"}], "rating": 4.5, "coordinates": {"latitude": 39.70984, "longitude":
+        -105.02533}, "transactions": ["delivery"], "price": "$", "location": {"address1":
+        "375 S Federal Blvd", "address2": "Unit 112", "address3": "", "city": "Denver",
+        "zip_code": "80219", "country": "US", "state": "CO", "display_address": ["375
+        S Federal Blvd", "Unit 112", "Denver, CO 80219"]}, "phone": "+13039224968",
+        "display_phone": "(303) 922-4968", "distance": 5540.48656227493}, {"id": "1txY1Yql-z2nu-q6rVs6rA",
+        "alias": "ho-ho-chinese-denver", "name": "Ho-Ho Chinese", "image_url": "https://s3-media1.fl.yelpcdn.com/bphoto/6xuW7lxyRkEKdRUyUp1glw/o.jpg",
+        "is_closed": false, "url": "https://www.yelp.com/biz/ho-ho-chinese-denver?adjust_creative=SG74TKmAPduZb5E7Qi7MtQ&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=SG74TKmAPduZb5E7Qi7MtQ",
+        "review_count": 23, "categories": [{"alias": "chinese", "title": "Chinese"}],
+        "rating": 3.5, "coordinates": {"latitude": 39.7641760401283, "longitude":
+        -104.972773503602}, "transactions": ["pickup", "delivery"], "location": {"address1":
+        "3350 Downing St", "address2": "", "address3": "", "city": "Denver", "zip_code":
+        "80205", "country": "US", "state": "CO", "display_address": ["3350 Downing
+        St", "Denver, CO 80205"]}, "phone": "+13032962777", "display_phone": "(303)
+        296-2777", "distance": 3193.2572561542847}, {"id": "dJ-0_wCQVpXD_aCwACp0EA",
+        "alias": "china-kitchen-denver-4", "name": "China Kitchen", "image_url": "https://s3-media4.fl.yelpcdn.com/bphoto/TOgQ6c0eisVmPGid9x45Pg/o.jpg",
+        "is_closed": false, "url": "https://www.yelp.com/biz/china-kitchen-denver-4?adjust_creative=SG74TKmAPduZb5E7Qi7MtQ&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=SG74TKmAPduZb5E7Qi7MtQ",
+        "review_count": 10, "categories": [{"alias": "chinese", "title": "Chinese"},
+        {"alias": "noodles", "title": "Noodles"}, {"alias": "soup", "title": "Soup"}],
+        "rating": 4.0, "coordinates": {"latitude": 39.82858, "longitude": -104.98683},
+        "transactions": ["delivery"], "price": "$", "location": {"address1": "7262
+        Broadway", "address2": "", "address3": "", "city": "Denver", "zip_code": "80221",
+        "country": "US", "state": "CO", "display_address": ["7262 Broadway", "Denver,
+        CO 80221"]}, "phone": "+13036504880", "display_phone": "(303) 650-4880", "distance":
+        10440.459882557214}, {"id": "7UpXDKmH1DCgg-6fvwFpwg", "alias": "ho-mei-chinese-restaurant-denver",
+        "name": "Ho Mei Chinese Restaurant", "image_url": "https://s3-media1.fl.yelpcdn.com/bphoto/KLr3K685G5NROJkXt7Uvjg/o.jpg",
+        "is_closed": false, "url": "https://www.yelp.com/biz/ho-mei-chinese-restaurant-denver?adjust_creative=SG74TKmAPduZb5E7Qi7MtQ&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=SG74TKmAPduZb5E7Qi7MtQ",
+        "review_count": 28, "categories": [{"alias": "chinese", "title": "Chinese"}],
+        "rating": 2.5, "coordinates": {"latitude": 39.76912, "longitude": -104.84648},
+        "transactions": ["delivery"], "price": "$", "location": {"address1": "3790
+        Peoria St", "address2": "", "address3": "", "city": "Denver", "zip_code":
+        "80239", "country": "US", "state": "CO", "display_address": ["3790 Peoria
+        St", "Denver, CO 80239"]}, "phone": "+13035768148", "display_phone": "(303)
+        576-8148", "distance": 11216.180318793853}, {"id": "yygRLd1EqaWgQbu7K-cgHw",
+        "alias": "panda-express-denver-18", "name": "Panda Express", "image_url":
+        "https://s3-media2.fl.yelpcdn.com/bphoto/EDHPz1ZgA3nKgMOMrwl9Mg/o.jpg", "is_closed":
+        false, "url": "https://www.yelp.com/biz/panda-express-denver-18?adjust_creative=SG74TKmAPduZb5E7Qi7MtQ&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=SG74TKmAPduZb5E7Qi7MtQ",
+        "review_count": 16, "categories": [{"alias": "chinese", "title": "Chinese"},
+        {"alias": "hotdogs", "title": "Fast Food"}], "rating": 2.5, "coordinates":
+        {"latitude": 39.715528, "longitude": -104.952382}, "transactions": ["pickup",
+        "delivery"], "price": "$", "location": {"address1": "3000 E 1st Ave", "address2":
+        "Ste 111", "address3": "", "city": "Denver", "zip_code": "80206", "country":
+        "US", "state": "CO", "display_address": ["3000 E 1st Ave", "Ste 111", "Denver,
+        CO 80206"]}, "phone": "+13033942969", "display_phone": "(303) 394-2969", "distance":
+        2697.724331868922}, {"id": "fAQyvL4MFWYZVqgAMDTpUA", "alias": "panda-express-lakewood-7",
+        "name": "Panda Express", "image_url": "https://s3-media3.fl.yelpcdn.com/bphoto/hbsrbM4VS_zWwHrPf4WNCg/o.jpg",
+        "is_closed": false, "url": "https://www.yelp.com/biz/panda-express-lakewood-7?adjust_creative=SG74TKmAPduZb5E7Qi7MtQ&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=SG74TKmAPduZb5E7Qi7MtQ",
+        "review_count": 39, "categories": [{"alias": "chinese", "title": "Chinese"},
+        {"alias": "hotdogs", "title": "Fast Food"}], "rating": 2.5, "coordinates":
+        {"latitude": 39.7405833, "longitude": -105.0816149}, "transactions": ["pickup",
+        "delivery"], "price": "$", "location": {"address1": "1509 Wadsworth Blvd",
+        "address2": "", "address3": "", "city": "Lakewood", "zip_code": "80214", "country":
+        "US", "state": "CO", "display_address": ["1509 Wadsworth Blvd", "Lakewood,
+        CO 80214"]}, "phone": "+13032370728", "display_phone": "(303) 237-0728", "distance":
+        9550.134431476947}, {"id": "KwpZ9Z5SkhEBi_kH8syYiA", "alias": "panda-express-littleton-5",
+        "name": "Panda Express", "image_url": "https://s3-media3.fl.yelpcdn.com/bphoto/CRndSNytnA7U_7e8uvOSgg/o.jpg",
+        "is_closed": false, "url": "https://www.yelp.com/biz/panda-express-littleton-5?adjust_creative=SG74TKmAPduZb5E7Qi7MtQ&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=SG74TKmAPduZb5E7Qi7MtQ",
+        "review_count": 39, "categories": [{"alias": "chinese", "title": "Chinese"},
+        {"alias": "hotdogs", "title": "Fast Food"}], "rating": 2.0, "coordinates":
+        {"latitude": 39.6387156, "longitude": -105.0792141}, "transactions": ["pickup",
+        "delivery"], "price": "$$", "location": {"address1": "7850 W Quincy Ave",
+        "address2": "", "address3": null, "city": "Littleton", "zip_code": "80123",
+        "country": "US", "state": "CO", "display_address": ["7850 W Quincy Ave", "Littleton,
+        CO 80123"]}, "phone": "+13039330808", "display_phone": "(303) 933-0808", "distance":
+        14241.512630360692}], "total": 9, "region": {"center": {"longitude": -104.97024536132812,
+        "latitude": 39.73552421220229}}}'
+  recorded_at: Tue, 19 Jan 2021 17:35:17 GMT
+recorded_with: VCR 6.0.0
