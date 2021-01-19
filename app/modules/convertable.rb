@@ -30,4 +30,11 @@ module Convertable
     compass = ['↑ N', '↗ NE', '→ E', '↘ SE', '↓ S', '↙ SW', '← W', '↖ NW']
     compass[(sector % 8)]
   end
+
+  def convert_temperature(forecast)
+    {
+      summary: forecast[:summary],
+      temperature: forecast[:temperature].to_i
+    }
+  end
 end

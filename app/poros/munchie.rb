@@ -13,11 +13,4 @@ class Munchie
     @forecast = convert_temperature(attributes[:forecast])
     @restaurant = attributes[:restaurant]
   end
-
-  def convert_temperature(forecast)
-    {
-      summary: forecast[:summary],
-      temperature: forecast[:temperature].to_i
-    }
-  end
 end
