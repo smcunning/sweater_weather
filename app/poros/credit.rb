@@ -5,7 +5,7 @@ class Credit
 
   def initialize(attributes)
     @source = 'unsplash.com',
-              @author = attributes[:name]
+    @author = attributes[:name]
     @author_website = attributes[:links][:html]
   end
 end
