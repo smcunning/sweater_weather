@@ -14,7 +14,7 @@ module Convertable
   end
 
   def convert_time_with_words(time)
-    if time[0] == 0
+    if time[0].to_i == 0
       "#{time[1]} hours, #{time[3..4]} minutes"
     else
       "#{time[0..1]} hours, #{time[3..4]} minutes"
