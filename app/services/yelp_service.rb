@@ -6,7 +6,7 @@ class YelpService
       req.headers["Authorization"] = "Bearer #{ENV.fetch("YELP_API_KEY")}"
       req.params[:location] = location
       req.params[:open_at] = open_at
-      req.params[:categories] = category
+      req.params[:term] = category
     end
     parse(results)
   end
