@@ -59,4 +59,26 @@ describe 'Road Trip Endpoint' do
       expect(json[:data][:attributes][:weather_at_eta][:conditions]).to be_a String
     end
   end
+
+  it 'cannot return a road trip without an authorized API Key' do
+    VCR.use_cassette('road-trip-data') do
+      road_trip_params = {
+        origin: 'Denver,CO',
+        destination: 'Pueblo,CO',
+        api_key: 'kjlh12j3n;alsdf9c271lcjkvhalsdd'
+      }
+
+      headers = { 'CONTENT_TYPE' => 'application/json' }
+
+      post '/api/v1/road_trip', headers: headers, params: road_trip_params, as: :json
+
+      expect(response.status).to eq(401)
+      expect(response.content_type).to include('application/json')
+
+      json = JSON.parse(response.body, symbolize_names: true)
+
+      expect(json[:message]).to eq('unsuccessful')
+      expect(json[:error]).to eq('API Key unauthorized')
+    end
+  end
 end
