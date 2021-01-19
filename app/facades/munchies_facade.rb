@@ -21,7 +21,7 @@ class MunchiesFacade
     restaurant = YelpService.businesses(end_city, hour, category)
     {
       name: restaurant[:businesses][0][:name],
-      address: restaurant[:businesses][0][:location]
+      address: restaurant[:businesses][0][:location][:display_address].to_s
     }
   end
 
