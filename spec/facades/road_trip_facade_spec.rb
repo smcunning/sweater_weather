@@ -24,13 +24,13 @@ describe RoadTripFacade do
     end
 
     it '.hour_at_destination' do
-      travel_time = {:formatted=>"01:44:22", :real=>6558}
+      travel_time = { formatted: '01:44:22', real: 6558 }
       hour = RoadTripFacade.hour_at_destination(travel_time)
       expect(hour).to be_an_instance_of(Time)
     end
 
     it '.travel_time' do
-      VCR.use_cassette('travel_time') do
+      VCR.use_cassette('travel_time', record: :new_episodes) do
         data = RoadTripFacade.travel_time('Denver,CO', 'Pueblo,CO')
         expect(data).to be_a Hash
       end

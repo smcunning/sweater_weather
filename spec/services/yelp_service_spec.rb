@@ -5,7 +5,7 @@ require 'rails_helper'
 describe YelpService do
   context 'instance methods' do
     it 'returns a list of businesses by location, category and open time' do
-      VCR.use_cassette('yelp-business-search') do
+      VCR.use_cassette('yelp-business-search', record: :new_episodes ) do
         @search = YelpService.businesses('pueblo,co', 1_611_021_600, 'chinese')
       end
 
