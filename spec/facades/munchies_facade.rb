@@ -33,7 +33,7 @@ describe MunchiesFacade do
         data = MunchiesFacade.weather_at_eta(time, 'pueblo,co')
         expect(data).to be_a Hash
         expect(data).to have_key :summary
-        expect(data[:conditions]).to be_a String
+        expect(data[:summary]).to be_a String
         expect(data).to have_key :temperature
         expect(data[:temperature]).to be_a Float
       end
