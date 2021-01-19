@@ -7,7 +7,7 @@ module Api
         start_city = params[:start]
         end_city = params[:end]
         category = params[:category]
-        render json: MunchiesFacade.trip_details(start_city, end_city, category)
+        render json: MunchiesFacade.munchies_at_destination(start_city, end_city, category)
       end
     end
   end
