@@ -24,7 +24,7 @@ describe YelpService do
       expect(@search[:businesses][0][:location]).to have_key :state
       expect(@search[:businesses][0][:location][:state]).to be_a String
       expect(@search[:businesses][0][:location]).to have_key :zip_code
-      expect(@search[:businesses][0][:location][:zip_code]).to be_a String\
-    end 
+      expect(@search[:businesses][0][:location][:zip_code]).to be_a String
+    end
   end
 end
