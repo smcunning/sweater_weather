@@ -10,7 +10,11 @@ class Munchie
     @id = 'null'
     @destination_city = attributes[:destination_city]
     @travel_time = convert_time_with_words(attributes[:travel_time][:formatted])
-    @forecast = attributes[:forecast]
+    @forecast = convert_temperature(attributes[:forecast])
     @restaurant = attributes[:restaurant]
+  end
+
+  def convert_temperature(forecast)
+    forecast[:temperature] = forecast[:temperature].to_i
   end
 end
