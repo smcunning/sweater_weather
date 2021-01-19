@@ -13,6 +13,14 @@ module Convertable
     Time.at(time).strftime('%k:%M')
   end
 
+  def convert_time_with_words(time)
+    if time[0].to_i == 0
+      "#{time[1]} hours, #{time[3..4]} minutes"
+    else
+      "#{time[0..1]} hours, #{time[3..4]} minutes"
+    end
+  end
+
   def convert_wind_speed(speed)
     "#{speed} mph"
   end

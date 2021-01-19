@@ -23,5 +23,19 @@ describe MapquestService do
         expect(@search[:results][0][:locations][0][:latLng][:lng]).to be_a Float
       end
     end
+
+    context '#travel_time' do
+      it 'returns a travel time based on start_city and end_city' do
+        VCR.use_cassette('travel_time', record: :new_episodes) do
+          @search = MapquestService.directions('denver,co', 'pueblo,co')
+        end
+
+        expect(@search).to be_a Hash
+        expect(@search).to have_key :route
+        expect(@search[:route]).to be_a Hash
+        expect(@search[:route]).to have_key :formattedTime
+        expect(@search[:route][:formattedTime]).to be_a String
+      end
+    end
   end
 end

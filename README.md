@@ -47,7 +47,7 @@
 - [`shoulda-matchers`](https://github.com/thoughtbot/shoulda-matchers) - simplifies testing syntax
 - [`launchy`](https://rubygems.org/gems/launchy/versions/2.5.0) - helper class for launching cross-platform applications
 - [`rubocop-rails`](https://github.com/rubocop-hq/rubocop-rails) - enforces Rails best practices and coding conventions
-- fastjson-api
+- [`fastjson-api`](https://github.com/Netflix/fast_jsonapi) - Ruby object serializer
 
 ***
 
@@ -241,6 +241,39 @@ Response Example:
 }
 ```
 
+**Road Trip**
+`POST /api/v1/road_trip`
+
+This endpoint uses a origin and destination to provide an expected time of arrival (`travel_time`) and the weather forecast at the destination, including its condition and temperature. The JSON body request must include an authorized API key to return a response.
+
+Request Example:
+```
+{
+  "origin": "Denver,CO",
+  "destination": "Pueblo,CO",
+  "api_key": "14de802c-be17-49ca-9d8f-27e0a8fae00b"
+}
+```
+
+Response Example:
+```
+{
+    "data": {
+        "id": "null",
+        "type": "roadtrip",
+        "attributes": {
+            "start_city": "Denver,CO",
+            "end_city": "Pueblo,CO",
+            "travel_time": "01 hours, 44 minutes",
+            "weather_at_eta": {
+                "conditions": "scattered clouds",
+                "temperature": 35.06
+            }
+        }
+    }
+}
+```
+
 ***
 ## Contributor
 - Shaunda Cunningham ++ [![LinkedIn][linkedin-shield]](https://www.linkedin.com/in/shaunda-cunningham/) ++ [![GitHub][github-shield]](https://github.com/smcunning)
@@ -248,8 +281,11 @@ Response Example:
 ***
 ## Acknowledgements
 This application utilizes the following free API datasets:
+
 [MapQuest Geocoding API](https://developer.mapquest.com/documentation/geocoding-api/)
+
 [OpenWeather Map One Call API](https://openweathermap.org/api/one-call-api)
+
 [Unsplash API](https://unsplash.com/documentation)
 
 <!-- MARKDOWN LINKS & IMAGES -->
