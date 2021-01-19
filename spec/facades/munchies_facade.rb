@@ -29,7 +29,7 @@ describe MunchiesFacade do
 
     it '.weather_at_eta' do
       VCR.use_cassette('munchies_weather') do
-        time = '2021-01-18 10:00:00.000000000 -0700'
+        time = '2021-01-18 10:00:00 -0700'
         data = MunchiesFacade.weather_at_eta(time, 'pueblo,co')
         expect(data).to be_a Hash
         expect(data).to have_key :summary

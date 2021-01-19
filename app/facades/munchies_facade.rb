@@ -1,6 +1,6 @@
 class MunchiesFacade
   def self.munchies_at_destination(start_city, end_city, category)
-    MunchiesSerializer.new()
+    MunchieSerializer.new(munchies_details(start_city, end_city, category))
   end
 
   def self.munchies_details(start_city, end_city, category)
@@ -27,12 +27,9 @@ class MunchiesFacade
 
   def self.weather_at_eta(hour_at_destination, end_city)
     forecast = ForecastFacade.forecast_data(end_city)
-
     forecast_at_destination = forecast.hourly.find do |hourly_forecast|
       hourly_forecast.time == hour_at_destination.to_s[11..15]
-      require "pry"; binding.pry
     end
-
     {
       summary: forecast_at_destination.conditions,
       temperature: forecast_at_destination.temperature
@@ -41,7 +38,8 @@ class MunchiesFacade
 
   def self.hour_at_destination(travel_time)
     current_time = Time.now.to_i
-    Time.strptime((current_time + travel_time[:real]).to_s, '%s').beginning_of_hour
+    test = Time.strptime((current_time + travel_time[:real]).to_s, '%s').beginning_of_hour
+    require "pry"; binding.pry
   end
 
   def self.travel_time(start_city, end_city)
