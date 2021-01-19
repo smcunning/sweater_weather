@@ -26,7 +26,7 @@ describe MapquestService do
 
     context '#travel_time' do
       it 'returns a travel time based on start_city and end_city' do
-        VCR.use_cassette('travel_time') do
+        VCR.use_cassette('travel_time', record: :new_episodes) do
           @search = MapquestService.directions('denver,co', 'pueblo,co')
         end
 

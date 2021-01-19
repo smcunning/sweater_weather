@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class RoadTrip
   include Convertable
   attr_reader :id,

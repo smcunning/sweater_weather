@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'rails_helper'
 
 describe 'Road Trip Endpoint' do
@@ -21,9 +23,9 @@ describe 'Road Trip Endpoint' do
   it 'can return road trip data with an origin and destination request' do
     VCR.use_cassette('road-trip-data') do
       road_trip_params = {
-        origin: "Denver,CO",
-        destination: "Pueblo,CO",
-        api_key: "#{@api_key}"
+        origin: 'Denver,CO',
+        destination: 'Pueblo,CO',
+        api_key: @api_key.to_s
       }
 
       headers = { 'CONTENT_TYPE' => 'application/json' }

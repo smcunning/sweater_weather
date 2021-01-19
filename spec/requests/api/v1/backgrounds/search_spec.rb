@@ -25,7 +25,7 @@ describe 'Backgrounds by Location Endpoint' do
       expect(image_data[:attributes][:credit]).to have_key :author
       expect(image_data[:attributes][:credit][:author]).to be_a String
       expect(image_data[:attributes][:credit]).to have_key :source
-      expect(image_data[:attributes][:credit][:source]).to be_an Array
+      expect(image_data[:attributes][:credit][:source]).to be_a String
       expect(image_data[:attributes][:credit]).to have_key :author_website
       expect(image_data[:attributes][:credit][:author_website]).to be_a String
     end

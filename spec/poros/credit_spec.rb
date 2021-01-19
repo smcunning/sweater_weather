@@ -27,11 +27,9 @@ describe Credit do
     }
 
     credit = Credit.new(data)
-
     expect(credit.author).to eq(data[:name])
-    expect(credit.source).to be_an Array
-    expect(credit.source[0]).to eq('unsplash.com')
-    expect(credit.source[1]).to eq(data[:name])
+    expect(credit.source).to be_an String
+    expect(credit.source).to eq('unsplash.com')
     expect(credit.author_website).to eq(data[:links][:html])
   end
 end

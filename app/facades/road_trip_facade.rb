@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class RoadTripFacade
   def self.road_trip(start_city, end_city)
     RoadTripSerializer.new(trip_details(start_city, end_city))
@@ -33,7 +35,6 @@ class RoadTripFacade
     current_time = Time.now.to_i
     Time.strptime((current_time + travel_time[:real]).to_s, '%s').beginning_of_hour
   end
-
 
   def self.travel_time(start_city, end_city)
     directions = MapquestService.directions(start_city, end_city)

@@ -4,7 +4,7 @@ class Credit
   attr_reader :source, :author, :author_website
 
   def initialize(attributes)
-    @source = 'unsplash.com',
+    @source = 'unsplash.com'
     @author = attributes[:name]
     @author_website = attributes[:links][:html]
   end
