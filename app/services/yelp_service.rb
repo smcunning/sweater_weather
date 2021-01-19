@@ -3,7 +3,7 @@
 class YelpService
   def self.businesses(location, open_at, category)
     results = conn.get('/v3/businesses/search?') do |req|
-      req.headers["Authorization"] = "Bearer #{ENV.fetch("YELP_API_KEY")}"
+      req.headers['Authorization'] = "Bearer #{ENV.fetch('YELP_API_KEY')}"
       req.params[:location] = location
       req.params[:open_at] = open_at
       req.params[:term] = category

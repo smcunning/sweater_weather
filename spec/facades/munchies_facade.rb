@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'rails_helper'
 
 describe MunchiesFacade do
@@ -18,7 +20,7 @@ describe MunchiesFacade do
 
     it '.restaurant' do
       VCR.use_cassette('yelp-business-search') do
-        restaurant = MunchiesFacade.restaurant('denver,co', 1611075600, 'chinese')
+        restaurant = MunchiesFacade.restaurant('denver,co', 1_611_075_600, 'chinese')
         expect(restaurant).to be_a Hash
         expect(restaurant).to have_key :name
         expect(restaurant[:name]).to be_a String
@@ -40,7 +42,7 @@ describe MunchiesFacade do
     end
 
     it '.hour_at_destination' do
-      travel_time = {:formatted=>"01:44:22", :real=>6558}
+      travel_time = { formatted: '01:44:22', real: 6558 }
       hour = MunchiesFacade.hour_at_destination(travel_time)
       expect(hour).to be_an_instance_of(Time)
     end

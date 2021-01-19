@@ -1,8 +1,10 @@
+# frozen_string_literal: true
+
 require 'rails_helper'
 
 describe 'Munchies Endpoint' do
   it 'can return restaurant data with an origin, destination and cuisine request' do
-    VCR.use_cassette('munchies-data', :record => :new_episodes) do
+    VCR.use_cassette('munchies-data', record: :new_episodes) do
       headers = { 'CONTENT_TYPE' => 'application/json' }
 
       get '/api/v1/munchies?start=denver,co&end=pueblo,co&food=chinese', headers: headers

@@ -26,13 +26,13 @@ describe Munchie do
   it 'can convert_temperature' do
     details = {
       destination_city: 'Pueblo, CO',
-      travel_time: {:formatted=>"01:44:22", :real=>6558},
-      forecast: {:summary=>"scattered clouds", :temperature=>33.19},
-      restaurant: {:name=>"Bingo Burger", :address=>"101 Central Plz and Pueblo, CO 81003"}
+      travel_time: { formatted: '01:44:22', real: 6558 },
+      forecast: { summary: 'scattered clouds', temperature: 33.19 },
+      restaurant: { name: 'Bingo Burger', address: '101 Central Plz and Pueblo, CO 81003' }
     }
 
     munchie = Munchie.new(details)
 
-    expect(munchie.forecast).to eq({:summary=>"scattered clouds", :temperature=>33})
+    expect(munchie.forecast).to eq({ summary: 'scattered clouds', temperature: 33 })
   end
 end

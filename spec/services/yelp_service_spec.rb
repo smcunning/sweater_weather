@@ -6,7 +6,7 @@ describe YelpService do
   context 'instance methods' do
     it 'returns a list of businesses by location, category and open time' do
       VCR.use_cassette('yelp-business-search') do
-        @search = YelpService.businesses('pueblo,co', 1611021600, 'chinese')
+        @search = YelpService.businesses('pueblo,co', 1_611_021_600, 'chinese')
       end
 
       expect(@search).to be_a Hash

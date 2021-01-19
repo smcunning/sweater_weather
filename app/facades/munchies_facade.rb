@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class MunchiesFacade
   def self.munchies_at_destination(start_city, end_city, category)
     MunchieSerializer.new(munchies_details(start_city, end_city, category))
