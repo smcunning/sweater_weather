@@ -15,6 +15,9 @@ class Munchie
   end
 
   def convert_temperature(forecast)
-    forecast[:temperature] = forecast[:temperature].to_i
+    {
+      summary: forecast[:summary],
+      temperature: forecast[:temperature].to_i
+    }
   end
 end
