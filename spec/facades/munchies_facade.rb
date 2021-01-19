@@ -23,7 +23,7 @@ describe MunchiesFacade do
         expect(restaurant).to have_key :name
         expect(restaurant[:name]).to be_a String
         expect(restaurant).to have_key :address
-        expect(restaraunt[:address]).to be_a Hash
+        expect(restaurant[:address]).to be_a Hash
       end
     end
 
@@ -46,7 +46,7 @@ describe MunchiesFacade do
     end
 
     it '.travel_time' do
-      VCR.use_cassette('travel_time') do
+      VCR.use_cassette('travel_time_munchies') do
         data = MunchiesFacade.travel_time('Denver,CO', 'Pueblo,CO')
         expect(data).to be_a Hash
       end
