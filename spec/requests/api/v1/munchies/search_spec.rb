@@ -40,4 +40,10 @@ describe 'Munchies Endpoint' do
       expect(json[:data][:attributes][:restaurant][:address]).to be_a String
     end
   end
+
+  it 'returns an error message when origin, destination or food are left blank' do
+  end
+
+  it 'returns an error message when all restaurants are closed at the eta' do
+  end 
 end
