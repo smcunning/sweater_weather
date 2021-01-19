@@ -5,9 +5,9 @@ class MunchiesFacade
 
   def self.munchies_details(start_city, end_city, category)
     time = travel_time(start_city, end_city)
-    hour = hour_at_destination(time).to_time.to_i
+    hour = hour_at_destination(time)
     weather = weather_at_eta(hour, end_city)
-    restaurant = restaurant(end_city, hour, category)
+    restaurant = restaurant(end_city, hour.to_time.to_i, category)
     details = {
       destination_city: end_city,
       travel_time: time,
@@ -39,7 +39,6 @@ class MunchiesFacade
   def self.hour_at_destination(travel_time)
     current_time = Time.now.to_i
     test = Time.strptime((current_time + travel_time[:real]).to_s, '%s').beginning_of_hour
-    require "pry"; binding.pry
   end
 
   def self.travel_time(start_city, end_city)
