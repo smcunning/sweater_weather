@@ -50,7 +50,7 @@ describe 'Forecast by Location Endpoint' do
 #Sad Path Testing
 
   it 'returns an error if the location is missing' do
-    VCR.use_cassette(`forecast-no-location`, record: :new_episodes) do
+    VCR.use_cassette('forecast-no-location', record: :new_episodes) do
       get '/api/v1/forecast?location'
 
       expect(response.status).to eq(400)
