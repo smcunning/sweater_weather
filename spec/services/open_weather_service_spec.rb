@@ -1,3 +1,4 @@
+
 # frozen_string_literal: true
 
 require 'rails_helper'
@@ -78,6 +79,63 @@ describe OpenWeatherService do
         expect(@search[:daily][0][:weather][0][:description]).to be_a String
         expect(@search[:daily][0][:weather][0]).to have_key :icon
         expect(@search[:daily][0][:weather][0][:icon]).to be_a String
+      end
+    end
+
+    context 'sad paths' do
+      it 'can find forecasts for cities outside of the US ' do
+        VCR.use_cassette('non-us-city-forecast', record: :new_episodes) do
+          @sweden = OpenWeatherService.forecast(60.1282, 18.6435)
+          @tokyo = OpenWeatherService.forecast(35.6762, 139.6503)
+        end
+
+        expect(@sweden).to have_key :current
+        expect(@sweden[:current]).to be_an Hash
+        expect(@sweden[:current]).to have_key :dt
+        expect(@sweden[:current][:dt]).to be_an Integer
+        expect(@sweden.count).to eq(7)
+        expect(@sweden[:hourly]).to be_an Array
+        expect(@sweden[:hourly][0]).to have_key :dt
+        expect(@sweden[:hourly][0][:dt]).to be_a Integer
+        expect(@sweden.count).to eq(7)
+        expect(@sweden[:daily]).to be_an Array
+        expect(@sweden[:daily][0]).to have_key :dt
+        expect(@sweden[:daily][0][:dt]).to be_an Integer
+
+        expect(@tokyo).to have_key :current
+        expect(@tokyo[:current]).to be_an Hash
+        expect(@tokyo[:current]).to have_key :dt
+        expect(@tokyo[:current][:dt]).to be_an Integer
+        expect(@tokyo.count).to eq(7)
+        expect(@tokyo[:hourly]).to be_an Array
+        expect(@tokyo[:hourly][0]).to have_key :dt
+        expect(@tokyo[:hourly][0][:dt]).to be_a Integer
+        expect(@tokyo.count).to eq(7)
+        expect(@tokyo[:daily]).to be_an Array
+        expect(@tokyo[:daily][0]).to have_key :dt
+        expect(@tokyo[:daily][0][:dt]).to be_an Integer
+      end
+
+      it 'can return an error with no params' do
+        VCR.use_cassette('forecast-no-coords', record: :new_episodes) do
+          @search = OpenWeatherService.forecast("","")
+        end
+
+        expect(@search).to have_key :message
+        expect(@search).to have_key :cod
+        expect(@search[:cod]).to eq("400")
+        expect(@search[:message]).to eq('Nothing to geocode')
+      end
+
+      it 'can return an error with an incorrect lat/long' do
+        VCR.use_cassette('forecast-wrong-coords', record: :new_episodes) do
+          @search = OpenWeatherService.forecast("nothing","here")
+        end
+
+        expect(@search).to have_key :message
+        expect(@search).to have_key :cod
+        expect(@search[:cod]).to eq("400")
+        expect(@search[:message]).to eq('wrong latitude')
       end
     end
   end
