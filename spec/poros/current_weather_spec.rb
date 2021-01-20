@@ -29,6 +29,7 @@ describe CurrentWeather do
     }
 
     current = CurrentWeather.new(data)
+    require "pry"; binding.pry
     expect(current).to be_an_instance_of CurrentWeather
     expect(current.datetime).to be_a String
     expect(current.sunrise).to be_a String

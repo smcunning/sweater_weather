@@ -2,7 +2,7 @@
 
 module Convertable
   def convert_datetime(datetime)
-    Time.zone.at(datetime).to_datetime.to_s
+    Time.at(datetime).to_s
   end
 
   def convert_date(date)
