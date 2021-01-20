@@ -2,7 +2,7 @@
 
 module Convertable
   def convert_datetime(datetime)
-    Time.zone.at(datetime).to_datetime.to_s
+    Time.at(datetime).to_s
   end
 
   def convert_date(date)
@@ -10,7 +10,7 @@ module Convertable
   end
 
   def convert_time(time)
-    Time.zone.at(time).strftime('%k:%M')
+    Time.zone.at(time).to_s[11..15]
   end
 
   def convert_time_with_words(time)
