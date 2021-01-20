@@ -36,8 +36,29 @@ describe 'Backgrounds by Location Endpoint' do
     VCR.use_cassette('partial-photos-invalid') do
       get '/api/v1/backgrounds?location=denv'
 
+      # expect(response.status).to eq(400)
+
       data = JSON.parse(response.body, symbolize_names: true)
-      require "pry"; binding.pry
+
+      expect(data).to be_a Hash
+      expect(data).to have_key :message
+      expect(data[:message]).to eq('unsuccessful')
+      expect(data[:error]).to eq('Location not found.')
+    end
+  end
+
+  it 'returns an error for no location given' do
+    VCR.use_cassette('partial-photos-invalid') do
+      get '/api/v1/backgrounds?location'
+
+      expect(response.status).to eq(400)
+
+      data = JSON.parse(response.body, symbolize_names: true)
+
+      expect(data).to be_a Hash
+      expect(data).to have_key :message
+      expect(data[:message]).to eq('unsuccessful')
+      expect(data[:error]).to eq('Location not found.')
     end
   end
 end
