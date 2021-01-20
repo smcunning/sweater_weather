@@ -33,7 +33,7 @@ class RoadTripFacade
     lat = coords[:results][0][:locations][0][:latLng][:lat]
     lon = coords[:results][0][:locations][0][:latLng][:lng]
     forecast = ForecastFacade.forecast_data(lat, lon)
-require "pry"; binding.pry
+
     forecast_at_destination = forecast.hourly.find do |hourly_forecast|
       hourly_forecast.time == hour_at_destination.to_s[11..15]
     end

@@ -10,7 +10,7 @@ module Convertable
   end
 
   def convert_time(time)
-    Time.zone.at(time).strftime('%k:%M')
+    Time.zone.at(time).to_s[11..15]
   end
 
   def convert_time_with_words(time)
