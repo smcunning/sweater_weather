@@ -7,14 +7,13 @@
     - [Ruby & Rails Versions](#ruby-&-rails-versions)
     - [Testing](#testing)
     - [Extras](#extras)
-- [Design](#design)
-    - [Schema](#schema)
-    - [Endpoints](#endpoints)
+- [Endpoints](#endpoints)
 - [Contributor](#contributor)
 - [Acknowledgements](#Acknowledgements)
 
 ***
 ## Overview
+*Sweater Weather* is a Rails API for a fictional weather & trip planning web application. It uses data from Mapquest, Open Weather and the Unsplash external API services to aggregate multiple data points to provide images based on location, forecast information for a location determined by coordinates, and a road trip which provides an ETA and weather information upon arrival to your destination.
 
 ***
 
@@ -23,18 +22,27 @@
 ## Ruby & Rails versions
 - Ruby 2.5.3
 - Rails 5.2.4.3
+- Postgres
 
 ## Local Setup Instructions
 1. Fork and clone this repo into a new directory.
 2. CD into `sweater_weather`
 3. Run `bundle install` to install gem packages.
 4. Run `rails db:setup` to setup the databases.
+5. Run `bundle exec figaro install`
+6. Add your own API keys to the `config/application.yml` file and name them accordingly:
+
+- `MAPQUEST_API_KEY: <api_key>`
+- `OPEN_WEATHER_API_KEY: <api_key>`
+- `UNSPLASH_API_KEY: <api_key>`
 
 ### Testing
 - Run Unit tests: `bundle exec rspec`
 - Run through the different endpoints by running your server from the console: `rails s`
     - You can then utilize Postman to delve into all of the endpoints created in this API
+
     [![Run in Postman](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/939ae4469e708be62766)
+
 ### Extras
 
 **Gems**
@@ -51,11 +59,7 @@
 
 ***
 
-## Design
-***
-### Schema
-
-### Endpoints
+## Endpoints
 **Forecast by Location**
 `GET /api/v1/forecast?location=city,state`
 
@@ -280,6 +284,8 @@ Response Example:
 
 ***
 ## Acknowledgements
+This project was completed at the Turing School of Design & Engineering, Backend Engineering Program during Module 3. Checkout the [project page](https://backend.turing.io/module3/projects/sweater_weather/) and [technical requirements](https://backend.turing.io/module3/projects/sweater_weather/requirements).
+
 This application utilizes the following free API datasets:
 
 [MapQuest Geocoding API](https://developer.mapquest.com/documentation/geocoding-api/)
