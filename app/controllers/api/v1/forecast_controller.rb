@@ -8,7 +8,7 @@ module Api
           render json: ForecastFacade.forecast(params[:location])
         else
           render json: { message: 'unsuccessful', error: 'Location not found.' },
-                 status: 400
+                 status: :bad_request
         end
       end
     end

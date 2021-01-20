@@ -8,8 +8,8 @@ module Api
           render json: BackgroundFacade.location_photos(params[:location])
         else
           render json: { message: 'unsuccessful', error: 'Location not found.' },
-                 status: 400
-        end 
+                 status: :bad_request
+        end
       end
     end
   end
