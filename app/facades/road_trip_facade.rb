@@ -7,15 +7,25 @@ class RoadTripFacade
 
   def self.trip_details(start_city, end_city)
     time = travel_time(start_city, end_city)
-    hour = hour_at_destination(time)
-    weather = weather_at_eta(hour, end_city)
-    details = {
-      start_city: start_city,
-      end_city: end_city,
-      travel_time: time,
-      weather_at_eta: weather
-    }
-    RoadTrip.new(details)
+
+    if time[:formatted]
+      hour = hour_at_destination(time)
+      weather = weather_at_eta(hour, end_city)
+      details = {
+        start_city: start_city,
+        end_city: end_city,
+        travel_time: time,
+        weather_at_eta: weather
+      }
+      RoadTrip.new(details)
+    else
+      details = {
+        start_city: start_city,
+        end_city: end_city,
+        travel_time: "impossible",
+        weather_at_eta: ""
+      }
+    end
   end
 
   def self.weather_at_eta(hour_at_destination, end_city)
@@ -23,7 +33,7 @@ class RoadTripFacade
     lat = coords[:results][0][:locations][0][:latLng][:lat]
     lon = coords[:results][0][:locations][0][:latLng][:lng]
     forecast = ForecastFacade.forecast_data(lat, lon)
-
+require "pry"; binding.pry
     forecast_at_destination = forecast.hourly.find do |hourly_forecast|
       hourly_forecast.time == hour_at_destination.to_s[11..15]
     end
