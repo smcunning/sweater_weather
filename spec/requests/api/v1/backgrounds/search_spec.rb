@@ -30,4 +30,14 @@ describe 'Backgrounds by Location Endpoint' do
       expect(image_data[:attributes][:credit][:author_website]).to be_a String
     end
   end
+
+#Sad Path Testing
+  it 'returns an error for invalid location queries' do
+    VCR.use_cassette('partial-photos-invalid') do
+      get '/api/v1/backgrounds?location=denv'
+
+      data = JSON.parse(response.body, symbolize_names: true)
+      require "pry"; binding.pry
+    end
+  end
 end

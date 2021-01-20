@@ -4,7 +4,12 @@ module Api
   module V1
     class BackgroundsController < ApplicationController
       def show
-        render json: BackgroundFacade.location_photos(params[:location])
+        if params[:location]
+          render json: BackgroundFacade.location_photos(params[:location])
+        else
+          render json: { message: 'unsuccessful', error: 'Location not found.' },
+                 status: 400
+        end 
       end
     end
   end
