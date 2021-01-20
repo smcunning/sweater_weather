@@ -46,4 +46,32 @@ describe 'Forecast by Location Endpoint' do
       expect(forecast[:attributes][:hourly_weather][0][:icon]).to be_a String
     end
   end
+
+#Sad Path Testing
+
+  it 'returns an error if the location is missing' do
+    VCR.use_cassette(`forecast-no-location`, record: :new_episodes) do
+      get '/api/v1/forecast?location'
+
+      expect(response.status).to eq(400)
+
+      forecast = JSON.parse(response.body, symbolize_names: true)
+
+      expect(forecast).to be_a Hash
+      expect(forecast[:message]).to eq('unsuccessful')
+      expect(forecast[:error]).to eq('Location not found.')
+    end
+  end
+
+  it 'returns an error if a location cant be found' do
+    VCR.use_cassette('forecast-location-not-found', record: :new_episodes) do
+      get '/api/v1/forecast?location=#$2341dadf'
+
+      forecast = JSON.parse(response.body, symbolize_names: true)
+
+      expect(forecast).to be_a Hash
+      expect(forecast[:message]).to eq('unsuccessful')
+      expect(forecast[:error]).to eq('Location not found.')
+    end
+  end
 end

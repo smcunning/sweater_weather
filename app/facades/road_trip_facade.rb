@@ -19,7 +19,10 @@ class RoadTripFacade
   end
 
   def self.weather_at_eta(hour_at_destination, end_city)
-    forecast = ForecastFacade.forecast_data(end_city)
+    coords = ForecastFacade.city_coordinates(end_city)
+    lat = coords[:results][0][:locations][0][:latLng][:lat]
+    lon = coords[:results][0][:locations][0][:latLng][:lng]
+    forecast = ForecastFacade.forecast_data(lat, lon)
 
     forecast_at_destination = forecast.hourly.find do |hourly_forecast|
       hourly_forecast.time == hour_at_destination.to_s[11..15]
