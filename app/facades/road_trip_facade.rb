@@ -7,25 +7,15 @@ class RoadTripFacade
 
   def self.trip_details(start_city, end_city)
     time = travel_time(start_city, end_city)
-
-    if time[:formatted]
-      hour = hour_at_destination(time)
-      weather = weather_at_eta(hour, end_city)
-      details = {
-        start_city: start_city,
-        end_city: end_city,
-        travel_time: time,
-        weather_at_eta: weather
-      }
-      RoadTrip.new(details)
-    else
-      details = {
-        start_city: start_city,
-        end_city: end_city,
-        travel_time: "impossible",
-        weather_at_eta: ""
-      }
-    end
+    hour = hour_at_destination(time)
+    weather = weather_at_eta(hour, end_city)
+    details = {
+      start_city: start_city,
+      end_city: end_city,
+      travel_time: time,
+      weather_at_eta: weather
+    }
+    RoadTrip.new(details)
   end
 
   def self.weather_at_eta(hour_at_destination, end_city)

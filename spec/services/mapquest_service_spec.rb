@@ -145,11 +145,6 @@ describe MapquestService do
         expect(@sydney[:info][:messages][0]).to be_a String
         expect(@sydney[:info][:messages][0]).to eq("We are unable to route with the given locations.")
       end
-
-      it 'can find partial results' do
-
-
-      end
     end
   end
 end
